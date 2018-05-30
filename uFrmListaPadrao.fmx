@@ -1,0 +1,216 @@
+object frmListaPadrao: TfrmListaPadrao
+  Left = 0
+  Top = 0
+  ClientHeight = 440
+  ClientWidth = 499
+  StyleLookup = 'calloutpanelstyle'
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object lytBase: TLayout
+    Align = Client
+    Size.Width = 499.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lytLista: TLayout
+      Align = Client
+      Size.Width = 499.000000000000000000
+      Size.Height = 440.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object lvLista: TListView
+        ItemAppearanceClassName = 'TImageListItemBottomDetailAppearance'
+        ItemEditAppearanceClassName = 'TImageListItemBottomDetailShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        AlternatingColors = True
+        Align = Client
+        Size.Width = 499.000000000000000000
+        Size.Height = 392.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ParentShowHint = False
+        ShowHint = False
+        ItemAppearance.ItemHeight = 50
+        ItemAppearanceObjects.ItemEditObjects.Text.Font.Size = 16.000000000000000000
+        ItemAppearanceObjects.ItemEditObjects.Text.Font.StyleExt = {00060000000000000004000000}
+        CanSwipeDelete = False
+        OnItemClick = lvListaItemClick
+        DeleteButtonText = ''
+        SearchAlwaysOnTop = False
+        object btnAdd: TRoundRect
+          Anchors = [akRight, akBottom]
+          Fill.Color = xFF26BC3A
+          Position.X = 369.000000000000000000
+          Position.Y = 294.000000000000000000
+          RotationCenter.X = 0.000000000000000000
+          RotationCenter.Y = 0.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claChartreuse
+          OnClick = btnAddClick
+          object Glyph1: TGlyph
+            Align = Center
+            Size.Width = 32.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            ImageIndex = 2
+            Images = ilPadrao
+          end
+        end
+      end
+      object tbMenu: TToolBar
+        Size.Width = 499.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object btnExtras: TButton
+          Align = Right
+          Images = ilPadrao
+          ImageIndex = 1
+          Position.X = 450.000000000000000000
+          Size.Width = 49.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'actiontoolbutton'
+          TabOrder = 1
+          Text = 'btnMore'
+        end
+        object btnMenu: TButton
+          Align = Left
+          Images = ilPadrao
+          ImageIndex = 0
+          Size.Width = 57.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'actiontoolbutton'
+          TabOrder = 0
+          Text = 'btnMenu'
+        end
+        object lblJanela: TLabel
+          Align = Client
+          StyledSettings = [Family, FontColor]
+          Size.Width = 393.000000000000000000
+          Size.Height = 48.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'lblJanela'
+          TabOrder = 3
+        end
+      end
+    end
+    object mvFunc: TMultiView
+      TargetControl = lytLista
+      DrawerOptions.DurationSliding = 0.200000002980232200
+      DrawerOptions.Placement = Right
+      DrawerOptions.TouchAreaSize = 0.000000000000000000
+      Mode = Drawer
+      ShadowOptions.Enabled = False
+      SplitViewOptions.Placement = Right
+      OnStartShowing = mvFuncStartShowing
+      OnShown = mvFuncShown
+      Size.Width = 250.000000000000000000
+      Size.Height = 440.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'multiviewstyle'
+      Visible = False
+      TabOrder = 0
+    end
+  end
+  object ilPadrao: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0042494441546843EDD5B111C030080340F0FE3B272E687C1980F8F86FA45695
+              020060B0ACFC78B6AABF905BD5C3AABC960100B379E26E0600CCE689BB190000
+              40978817A5B30C16289261D40000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_menu_white_48dp.png'
+          end>
+        Name = 'iMenu'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              00D1494441546843EDD6410AC2301005D0909003B850F4F67A05C5959EA72ED4
+              755AA18D7F6436B62A54821DE13F081D922CA6B409DF1111119596735EB66DBB
+              ABEBFA22436A99D365DBBAAE9B374D53A1E127983BE131D36D76A1C9F5A3E317
+              F02536BACD2EFC3267ED7740D6745B315E9FC578EF6F5A0E7C5AFB56F1178831
+              1EB41C08211CB5B40B8778F1E6105772C0759B6D68748503BB4F295D65A0DECA
+              9C2E139175B87498852683269985C66016EA6316B2805988E8CFE1D261169A0C
+              9A64161A8359A88F59C80266212222FA0DE7EE8E59F7BC3BE05DDE0000000049
+              454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_more_vert_white_48dp.png'
+          end>
+        Name = 'iMore'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              005F494441546843EDD7310AC020104541CDFDEF9C48D82A9501C32738D3ACED
+              0385B5010041BDE672E750C75B1FEAB8D451F3B704A40948139026204D40DAF4
+              7EF2DC6DBE36BB3BB94269FBBC81B7FC07260948139026204D409A0000605FAD
+              5DD4A30C36ADEAB23F0000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_add_white_48dp.png'
+          end>
+        Name = 'iAdd'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'iMenu'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iMore'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iAdd'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end>
+    Left = 16
+    Top = 52
+  end
+end

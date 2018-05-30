@@ -1,0 +1,330 @@
+object frmCaptura: TfrmCaptura
+  Left = 0
+  Top = 0
+  Caption = 'Editar imagem'
+  ClientHeight = 480
+  ClientWidth = 640
+  Position = OwnerFormCenter
+  StyleBook = frmPrincipal.StyleBook1
+  WindowState = wsMaximized
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 3
+  object tbCaptura: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnAbortar: TButton
+      Align = Left
+      Hint = 'Close Window|Close active form'
+      Images = ilCaptura
+      ImageIndex = 4
+      ModalResult = 3
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'actiontoolbutton'
+      TabOrder = 5
+      Text = 'Close Window'
+    end
+    object btnOk: TButton
+      Align = Right
+      Images = ilCaptura
+      ImageIndex = 2
+      ModalResult = 1
+      Position.X = 592.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'actiontoolbutton'
+      TabOrder = 4
+      Text = 'Button1'
+    end
+    object btnLibrary: TButton
+      Action = actLibrary
+      Align = Left
+      Enabled = True
+      Images = ilCaptura
+      ImageIndex = 3
+      Position.X = 96.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'actiontoolbutton'
+      TabOrder = 2
+    end
+    object btnCamera: TButton
+      Action = actCam
+      Align = Left
+      Enabled = True
+      Images = ilCaptura
+      ImageIndex = 0
+      Position.X = 48.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'actiontoolbutton'
+      TabOrder = 0
+    end
+    object btnCarregaWindows: TButton
+      Align = Left
+      Images = ilCaptura
+      ImageIndex = 3
+      Position.X = 144.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'actiontoolbutton'
+      TabOrder = 1
+      Text = 'Abrir Imagem'
+      Visible = False
+      OnClick = btnCarregaWindowsClick
+    end
+    object btnClear: TButton
+      Align = Left
+      Images = ilCaptura
+      ImageIndex = 1
+      Position.X = 144.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'actiontoolbutton'
+      TabOrder = 3
+      Text = 'btnClear'
+      OnClick = btnClearClick
+    end
+  end
+  object imgFoto: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 432.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object abrirDialog: TOpenDialog
+    Filter = 'Arquivos de imagem|*.jpg; *.png'
+    Left = 336
+    Top = 16
+  end
+  object ActionList1: TActionList
+    Left = 488
+    Top = 8
+    object actCam: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      Editable = True
+      MaxHeight = 512
+      MaxWidth = 512
+      OnDidFinishTaking = actCamDidFinishTaking
+    end
+    object actLibrary: TTakePhotoFromLibraryAction
+      Category = 'Media Library'
+      Editable = True
+      MaxHeight = 512
+      MaxWidth = 512
+      OnDidFinishTaking = actCamDidFinishTaking
+    end
+  end
+  object ilCaptura: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              030E494441546843ED98CB8AD4401486FB9ACE5670A405C5D6A59B7170272E7A
+              293220B813047D09F7B3F0066E7C035DB871270C0C38CE2B08334FE0B8517106
+              5DF6BDF5FFAB7F43A79398AAA4673A623E0875C9397F9F53A95455BA52525292
+              9FE974FAE89723F491FB6A4120F7149333F0BD2F99D58000367BBDDE58F13843
+              5F68DC92DCE9821FBE8100068A2533D0E8A1B829D9E500C1F66432D9EEF7FBC7
+              E657560863602CA8B6155E88AACA008CECDA68343AF03CEFBCBA0AC17038FC86
+              98AE56ABD59FEA32D45406C0E045D1822788A98DC17DA96640E409E0911DB55A
+              ADB36A168AC16070ECFBFE9A9A8648029C77AA1612CC9050CC9129F4AFB1D404
+              30FD0698A76FF1101FA0B981EB8CAE0DF6F11E6DD03E393885B280A56E17015E
+              924C22B481ED7BB93923996464E704027A26772BE05285CF9399B71B92484676
+              D63010B986C0AD0E46FB0E2FD6D51D02BE4F8D8803724D46765620805D14A155
+              01ED2E36C24FC6600EF5756566409B4F821AD6C83519D9A582234C1FA37B416E
+              06746FCDEEFE952D991BA071915ABA978ADC92915D2A18B9377231A0AB3BBB63
+              45E849504BFDA9C82520F3328AFD64475503A6C86B5553198FC7AF54352C6AB9
+              90671FF8A892A3DF69369BA94BE81F1A8D46873E6A9240CB953C097C5149AEA9
+              74613E81792D27F224103947E520B3569E04E657A07D952E1CAA24A1D5CC853C
+              0904D3062FE1215EE2CF6AA6425BFAA849B24C4143E604F0126EAA6AC04BFC50
+              D554166D17B57201312BB4915D969B01DD361B5928786AAC642323D880F65044
+              8E12F87E3D340673A82FEE28410D6BE49A8CECAC4100B12751DCE25ACFDD9957
+              EC610EFDCF713921D76464E70492883D912601178EFCE399B71B92484676CE20
+              20AB0F1A985EA1EDCCCB1DC90444369038235BF8B9E879DE3B9D6D0E507269A5
+              24A7D03ACADB7817EEFABEDFA47D16A0198A79A9099C068B09E4D9C80A412401
+              EC92990F56274D5C6C9104B04B7E50B570D4EBF53D550322EF00569273C874BF
+              807FEE7EC5E0AED76AB5237519224F0006DF61781D89EC6055F9A1EE95C11810
+              CB36635A0CBEA4A4A4A4E47FA752F90D900A8FF38F02EF3F0000000049454E44
+              AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_photo_camera_white_48dp.png'
+          end>
+        Name = 'imgCam'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0165494441546843ED98DD4AC340148483D877F3CA2B1F521014447CB686BA1B
+              CF2C738AB6A936CD6CB281F34149F627676620DD0DDB0541100441B0158661B8
+              4F29BDE49C9FD8250335511B1AECD262857726F061D7A1EFFB2F6508D4424DD4
+              A6C68E433AACF03B041C8678E4F0CDA0869B774CEB95C33A4CE8C1847A6A14AC
+              79981382E60F2C578006B438458B32C4E2E61D4588D5CC3B0C716A0021FE35B0
+              BA79E71623181B79E6AAE055981282E6A58B80846B42346BDE61885F6B390CC3
+              78F3E61D3374DC4D1D6BEF47CC4B36C02A8C85F809CDCBBFA3A43044A6E723B5
+              CCDFF1AA26F3BA2D36FD0A99B1B195087FE23D9B0586686E05BAB817E0877B76
+              1730B799107F99E714CCD9EE2EEC3417628A7987214E9F41888BCF54618E119B
+              3339B8149A9FF52AAC164261DE593C84D2BCC310A35FB19CA223A5F4468D0284
+              E79877ACC6D9EE5DE558C5EA2E75B0F5092D0E69B1C2B58F169FA1C1AE200882
+              20081AA7EBBE01BC96DBB40FD236620000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_clear_white_48dp.png'
+          end>
+        Name = 'imgClear'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0140494441546843EDD5B14AC35014C6F1448893087D0A872E5D5C3A75F15944
+              707070E8D6BE97A30FD0C1C7100411444212FD4EEF7742AAB7550331E7CAF941
+              69727BDBFB3F85D2CC39E79C73EE1F6A9AE60C8F4BDEA605E1D3B22C1FDF01D7
+              D75C4E03E39F245E61ED962F7F71C4671324BEAAAAFBA228265CDACAF3FC8497
+              76C5BE795A738B5D889CA51EFF1C7A7778FCA010996E3C7EB0E7A9C7BF30B8CB
+              E307355A3C0E3EADEBFA4E02B8F46B78EF7C94781C30C15FFB464E92803E4330
+              FE553EE393C1E38F11FF10CE0A38C49C5BBE355ABC42C0150F6C49D04F86C0D6
+              C5A8F1AACF10D822F16F61F78EBF8D5788BD61408BDFEE825B5AB2662A5EED19
+              4242DB21E4DA64BC3A34045EBB301DAFF60D8147C9DB2E5BF12A364484CD7885
+              C065E88CB21DAF101A1B228D7885E0EE1069C52BFC2656C9C63BE79C73AEB72C
+              FB0066404FF93AAF90930000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_done_white_48dp.png'
+          end>
+        Name = 'imgOk'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0248494441546843ED98BD4EC3301485FB9308898901508181BD0C0C2CBC04E2
+              159898E04958984142C0C00B2058606742020606767E5BC1C4004D5A8ECDE1AA
+              8D6BA8691B83E44F8A621F5F5DDF1B5FBB490B8140C09D56AB5549D3F4B0D168
+              D4D11E2A6A0E35179A154EDF4191F79E69369B1370781945D114A55C4892E401
+              73568BC5E20B254D89F79E81838DBC835760CE0A1EDE26BB82F30A60496B7036
+              CE6EAE6015EA711C4FB0AB714E40D5259B5E400574C4EC5C427F8D90806F8C3D
+              90ADF16CCD853D30604202BE0909F82624E09B90806FBC2680F7FB6D5C5BEC0E
+              06F5AAD00E658172DFE0DDFE1CB7585D689F69B107188630AC15D8C393DD67DB
+              00013F954AA525BCD634D485F6B2D238DC1F4C54A02C50B6822FB66BDC46D585
+              F68D16DB809620B945BA139486B1779A59A1B91DDA099405CA5D4100AF08A44A
+              5315D41CB4370E6BA0AD73D800C3AB9F5676686A8776026581B28D159A090878
+              8D63AD344D0F285B81CD0ECDBB42333BB413280B94BBB14B13030475841ABF42
+              322394ACC0CFB79B9A66766827501628778032D1754F13038C8D21F859767F04
+              B693F0F9A89D67A0891DDA099405CA42B6EE07057C76DDD41CB6433B81B240B9
+              1DA3EE07057C1B9B9A4382F337319ECA6D1445D3ECE60AF6C65D1CC733EC6A9C
+              7FC810FC099BB9831FBC533605E715501B0CA7CA45DEFF8FE2E9DF97CBE57924
+              51A3A4715E01387882A30524720CA7CF9487869A03731DAA39B3C12B9C57E0AF
+              11BE077CF3EF1330EADBE739AF70DD73C60AF83CE77F8391ADAF73FE8BBE5720
+              EF733E1008F443A1F0016EEDDE5063B7A3130000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_collections_white_48dp.png'
+          end>
+        Name = 'imgGaleria'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              00DF494441546843EDD8310AC2401046E1E0696C6C3CA1A89D37B510C13264E3
+              8BCCA4C9DA889A99E5FF409668086F824AD84E4444E457C6713C0CC370B6C35C
+              A6785E2F0C71B1B773A0798E770C71B48F63A37511DFF7FD95656BA7C445642D
+              FEC69237BE94B2B353E2A255F1ABA0B5AD78DCB3C7EFED94B80855FC2A08ADFD
+              601F99EFFC5F58C2E7B8C66AF113CB786B636BDBB81179BF428E6BE5FD077204
+              6B8810086E7A88F80F738EE0C510691EA71DCD1A22049AAB43B0C4DF9170C4D6
+              86C8B127E4886D7388345B8B8EE67988749BBB8EF6697BFD64872222225FD675
+              4F2288156ABCE71DCF0000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_arrow_back_white_48dp.png'
+          end>
+        Name = 'imgBack'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'imgCam'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'imgClear'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'imgOk'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'imgGaleria'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'imgBack'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end>
+    Left = 416
+    Top = 9
+  end
+end

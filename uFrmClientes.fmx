@@ -1,0 +1,1799 @@
+inherited frmClientes: TfrmClientes
+  Caption = 'Clientes'
+  ClientHeight = 427
+  ClientWidth = 645
+  DesignerMasterStyle = 0
+  inherited lytBase: TLayout
+    Size.Width = 645.000000000000000000
+    Size.Height = 427.000000000000000000
+    inherited lytLista: TLayout
+      Size.Width = 645.000000000000000000
+      Size.Height = 427.000000000000000000
+      inherited lvLista: TListView
+        ItemIndex = 0
+        Size.Width = 645.000000000000000000
+        Size.Height = 379.000000000000000000
+        ItemAppearanceObjects.ItemEditObjects.Text.Font.StyleExt = {00060000000000000004000000}
+        inherited btnAdd: TRoundRect
+          Position.X = 412.000000000000000000
+          Position.Y = 260.000000000000000000
+        end
+      end
+      inherited tbMenu: TToolBar
+        Size.Width = 645.000000000000000000
+        inherited btnExtras: TButton
+          Position.X = 597.000000000000000000
+          Size.Width = 48.000000000000000000
+        end
+        inherited btnMenu: TButton
+          Size.Width = 48.000000000000000000
+        end
+        inherited lblJanela: TLabel
+          Size.Width = 549.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          Text = 'Clientes'
+        end
+      end
+    end
+    inherited mvFunc: TMultiView
+      BorderOptions.Visible = False
+      Size.Width = 325.000000000000000000
+      Size.Height = 427.000000000000000000
+      object tcFunc: TTabControl
+        Align = Client
+        Size.Width = 325.000000000000000000
+        Size.Height = 427.000000000000000000
+        Size.PlatformDefault = False
+        TabHeight = 49.000000000000000000
+        TabIndex = 0
+        TabOrder = 0
+        TabPosition = None
+        Sizes = (
+          325s
+          427s
+          325s
+          427s)
+        object tbDetalhe: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'tbDetalhe'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object lbDetalhes: TListBox
+            Align = Client
+            Size.Width = 325.000000000000000000
+            Size.Height = 427.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            AlternatingRowBackground = True
+            DisableFocusEffect = True
+            Images = ilCliente
+            DefaultItemStyles.ItemStyle = 'listboxitembottomdetail'
+            DefaultItemStyles.GroupHeaderStyle = ''
+            DefaultItemStyles.GroupFooterStyle = ''
+            Viewport.Width = 305.000000000000000000
+            Viewport.Height = 373.000000000000000000
+            object lbiNome: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'Nome'
+              ImageIndex = 7
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+            object lbiNasc: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'Nascimento'
+              ImageIndex = 4
+              Position.Y = 45.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+            end
+            object lbiDoc: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'CPF/CNPJ'
+              ImageIndex = 8
+              Position.Y = 90.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+            end
+            object lbiRG: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'RG/IE'
+              ImageIndex = 8
+              Position.Y = 135.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 6
+            end
+            object lbiFone1: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'Fone 1   (toque para ligar)'
+              ItemData.Accessory = aMore
+              ImageIndex = 3
+              Position.Y = 180.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              OnClick = lbiFone1Click
+            end
+            object lbiFone2: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'Fone 2 (toque para ligar)'
+              ItemData.Accessory = aMore
+              ImageIndex = 3
+              Position.Y = 225.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 4
+              OnClick = lbiFone2Click
+            end
+            object lbiEndereco: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'Endere'#231'o'
+              ImageIndex = 9
+              Position.Y = 270.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 7
+            end
+            object lbiLimite: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'Limite de compras'
+              ImageIndex = 2
+              Position.Y = 315.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 5
+            end
+            object lbiEmail: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'Email'
+              ImageIndex = 6
+              Position.Y = 360.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 9
+            end
+            object lbiObs: TListBoxItem
+              StyledSettings = [Family, Size, Style, FontColor]
+              ItemData.Detail = 'Observa'#231#245'es'
+              ImageIndex = 10
+              Position.Y = 405.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 45.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 8
+            end
+            object ListBoxItem1: TListBoxItem
+              Position.Y = 450.000000000000000000
+              Size.Width = 305.000000000000000000
+              Size.Height = 55.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 10
+              Text = 'ListBoxItem1'
+              object tbVisualizar: TToolBar
+                Align = Bottom
+                Position.Y = 7.000000000000000000
+                Size.Width = 305.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'toolbarstyle'
+                TabOrder = 0
+                object btnEditar: TButton
+                  Align = Client
+                  Images = ilCliente
+                  ImageIndex = 12
+                  Size.Width = 305.000000000000000000
+                  Size.Height = 48.000000000000000000
+                  Size.PlatformDefault = False
+                  StyleLookup = 'actiontoolbutton'
+                  TabOrder = 0
+                  Text = 'Editar dados'
+                  OnClick = btnEditarClick
+                end
+              end
+            end
+            object ListBoxHeader1: TListBoxHeader
+              Size.Width = 321.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object Label1: TLabel
+                Align = Client
+                StyledSettings = [Family, FontColor]
+                Margins.Left = 20.000000000000000000
+                Size.Width = 253.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.Font.Size = 16.000000000000000000
+                TextSettings.Font.StyleExt = {00060000000000000004000000}
+                Text = 'Dados do cliente'
+                TabOrder = 0
+              end
+              object btnBack: TButton
+                Align = Left
+                Images = ilCliente
+                ImageIndex = 11
+                Size.Width = 48.000000000000000000
+                Size.Height = 50.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'actiontoolbutton'
+                TabOrder = 1
+                Text = 'btnBack'
+                OnClick = btnBackClick
+              end
+            end
+          end
+        end
+        object tbCad: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 8.000000000000000000
+          Size.Height = 8.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'tbCad'
+          ExplicitSize.cx = 8.000000000000000000
+          ExplicitSize.cy = 8.000000000000000000
+          object tbCadastro: TToolBar
+            Size.Width = 325.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object btnVoltar: TButton
+              Align = Left
+              Images = ilCliente
+              ImageIndex = 1
+              ModalResult = 2
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'actiontoolbutton'
+              TabOrder = 0
+              Text = 'Voltar'
+              OnClick = btnVoltarClick
+            end
+            object btnSalvar: TButton
+              Align = Right
+              Images = ilCliente
+              ImageIndex = 5
+              ModalResult = 6
+              Position.X = 277.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'actiontoolbutton'
+              TabOrder = 1
+              Text = 'Salvar'
+              OnClick = btnSalvarClick
+            end
+          end
+          object tcCadastro: TTabControl
+            Align = Client
+            FullSize = True
+            Size.Width = 325.000000000000000000
+            Size.Height = 379.000000000000000000
+            Size.PlatformDefault = False
+            TabHeight = 49.000000000000000000
+            TabIndex = 1
+            TabOrder = 1
+            TabPosition = Bottom
+            Sizes = (
+              325s
+              330s
+              325s
+              330s)
+            object tabBasic: TTabItem
+              CustomIcon = <
+                item
+                end>
+              IsSelected = False
+              Size.Width = 161.000000000000000000
+              Size.Height = 49.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = ''
+              TabOrder = 0
+              Text = 'Dados Pessoais'
+              ExplicitSize.cx = 120.000000000000000000
+              ExplicitSize.cy = 49.000000000000000000
+              object vsBasic: TVertScrollBox
+                Align = Client
+                Size.Width = 325.000000000000000000
+                Size.Height = 330.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                Viewport.Width = 309.000000000000000000
+                Viewport.Height = 330.000000000000000000
+                object gridBasic: TGridPanelLayout
+                  Align = Horizontal
+                  Size.Width = 309.000000000000000000
+                  Size.Height = 500.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  ColumnCollection = <
+                    item
+                      SizeStyle = Absolute
+                      Value = 35.000000000000000000
+                    end
+                    item
+                      Value = 50.000000000000040000
+                    end
+                    item
+                      Value = 49.999999999999960000
+                    end>
+                  ControlCollection = <
+                    item
+                      Column = 0
+                      Control = imgNome
+                      Row = 0
+                    end
+                    item
+                      Column = 1
+                      ColumnSpan = 2
+                      Control = edtNome
+                      Row = 0
+                    end
+                    item
+                      Column = 0
+                      Control = imgFone
+                      Row = 1
+                    end
+                    item
+                      Column = 1
+                      Control = edtFone1
+                      Row = 1
+                    end
+                    item
+                      Column = 2
+                      Control = edtFone2
+                      Row = 1
+                    end
+                    item
+                      Column = 0
+                      Control = imgCPF
+                      Row = 2
+                    end
+                    item
+                      Column = 1
+                      Control = edtCPF_CNPJ
+                      Row = 2
+                    end
+                    item
+                      Column = 2
+                      Control = edtRG_IE
+                      Row = 2
+                    end
+                    item
+                      Column = 0
+                      ColumnSpan = 2
+                      Control = lblNasc
+                      Row = 3
+                    end
+                    item
+                      Column = 2
+                      Control = lblSexo
+                      Row = 3
+                    end
+                    item
+                      Column = 0
+                      Control = imgData
+                      Row = 4
+                    end
+                    item
+                      Column = 1
+                      Control = dtNasc
+                      Row = 4
+                    end
+                    item
+                      Column = 2
+                      Control = gridSexo
+                      Row = 4
+                    end
+                    item
+                      Column = 0
+                      ColumnSpan = 3
+                      Control = lblEndereco
+                      Row = 5
+                    end
+                    item
+                      Column = 0
+                      Control = imgLocation
+                      Row = 6
+                    end
+                    item
+                      Column = 1
+                      ColumnSpan = 2
+                      Control = edtEndereco
+                      Row = 6
+                    end>
+                  RowCollection = <
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 35.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 35.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 80.000000000000000000
+                    end
+                    item
+                      SizeStyle = Auto
+                    end>
+                  object dtNasc: TDateEdit
+                    IsEmpty = True
+                    Date = 34256.000000000000000000
+                    Align = Client
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 127.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    StyledSettings = [Family, Style, FontColor]
+                    TabOrder = 0
+                    TextSettings.Font.Size = 16.000000000000000000
+                  end
+                  object edtCPF_CNPJ: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 1
+                    KeyboardType = NumberPad
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 127.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'CPF/CNPJ'
+                    StyledSettings = [Family, Style, FontColor]
+                  end
+                  object edtEndereco: TMemo
+                    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+                    DataDetectorTypes = [Address]
+                    StyledSettings = [Family, Style, FontColor]
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.WordWrap = True
+                    Align = Client
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 264.000000000000000000
+                    Size.Height = 70.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 2
+                    Viewport.Width = 264.000000000000000000
+                    Viewport.Height = 70.000000000000000000
+                  end
+                  object edtFone1: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 3
+                    KeyboardType = PhonePad
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 127.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Fone 1'
+                    StyledSettings = [Family, Style, FontColor]
+                  end
+                  object edtFone2: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 4
+                    KeyboardType = PhonePad
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 127.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Fone 2'
+                    StyledSettings = [Family, Style, FontColor]
+                  end
+                  object edtNome: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 5
+                    KeyboardType = Alphabet
+                    Text = 'Ficou'
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 264.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Nome'
+                    StyledSettings = [Family, Style, FontColor]
+                    KillFocusByReturn = True
+                  end
+                  object edtRG_IE: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 6
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 127.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'RG/I.E.'
+                    StyledSettings = [Family, Style, FontColor]
+                  end
+                  object imgCPF: TGlyph
+                    AutoHide = False
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 8
+                    Images = ilCliente
+                  end
+                  object imgData: TGlyph
+                    AutoHide = False
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 4
+                    Images = ilCliente
+                  end
+                  object imgFone: TGlyph
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 3
+                    Images = ilCliente
+                  end
+                  object imgLocation: TGlyph
+                    AutoHide = False
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 70.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 9
+                    Images = ilCliente
+                  end
+                  object imgNome: TGlyph
+                    AutoHide = False
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 7
+                    Images = ilCliente
+                  end
+                  object lblNasc: TLabel
+                    Align = Client
+                    AutoSize = True
+                    StyledSettings = [Family, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 162.000000000000000000
+                    Size.Height = 25.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00060000000000000004000000}
+                    TextSettings.VertAlign = Trailing
+                    TextSettings.WordWrap = False
+                    Text = 'Data de Nascimento'
+                    TabOrder = 13
+                  end
+                  object lblSexo: TLabel
+                    Align = Client
+                    AutoSize = True
+                    StyledSettings = [Family, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 127.000000000000000000
+                    Size.Height = 25.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00060000000000000004000000}
+                    TextSettings.VertAlign = Trailing
+                    Text = 'Sexo'
+                    TabOrder = 14
+                  end
+                  object gridSexo: TGridLayout
+                    Align = Client
+                    ItemHeight = 20.000000000000000000
+                    ItemWidth = 45.000000000000000000
+                    Orientation = Vertical
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 127.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 15
+                    object lblMasc: TLabel
+                      Anchors = []
+                      AutoSize = True
+                      StyledSettings = [Family, FontColor]
+                      HitTest = True
+                      Size.Width = 45.000000000000000000
+                      Size.Height = 20.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 16.000000000000000000
+                      TextSettings.Font.StyleExt = {00060000000000000004000000}
+                      Text = 'Masc'
+                      TabOrder = 0
+                      OnClick = lblMascClick
+                    end
+                    object swSexo: TSwitch
+                      IsChecked = False
+                      Margins.Left = 2.000000000000000000
+                      Margins.Right = 2.000000000000000000
+                      Position.X = 47.000000000000000000
+                      Size.Width = 41.000000000000000000
+                      Size.Height = 20.000000000000000000
+                      Size.PlatformDefault = False
+                      TabOrder = 1
+                    end
+                    object lblFem: TLabel
+                      Align = Client
+                      AutoSize = True
+                      StyledSettings = [Family, FontColor]
+                      HitTest = True
+                      Size.Width = 45.000000000000000000
+                      Size.Height = 20.000000000000000000
+                      Size.PlatformDefault = False
+                      TextSettings.Font.Size = 16.000000000000000000
+                      TextSettings.Font.StyleExt = {00060000000000000004000000}
+                      Text = 'Fem'
+                      TabOrder = 2
+                      OnClick = lblFemClick
+                    end
+                  end
+                  object lblEndereco: TLabel
+                    Align = Client
+                    AutoSize = True
+                    StyledSettings = [Family, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 299.000000000000000000
+                    Size.Height = 25.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00060000000000000004000000}
+                    TextSettings.VertAlign = Trailing
+                    TextSettings.WordWrap = False
+                    Text = 'Endere'#231'o'
+                    TabOrder = 12
+                  end
+                end
+              end
+            end
+            object tabExtras: TTabItem
+              CustomIcon = <
+                item
+                end>
+              IsSelected = True
+              Size.Width = 162.000000000000000000
+              Size.Height = 49.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = ''
+              TabOrder = 0
+              Text = 'Mais informa'#231#245'es'
+              ExplicitSize.cx = 174.000000000000000000
+              ExplicitSize.cy = 49.000000000000000000
+              object vsExtras: TVertScrollBox
+                Align = Client
+                Size.Width = 325.000000000000000000
+                Size.Height = 330.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 13
+                Viewport.Width = 309.000000000000000000
+                Viewport.Height = 330.000000000000000000
+                object gridExtras: TGridPanelLayout
+                  Align = Horizontal
+                  Size.Width = 309.000000000000000000
+                  Size.Height = 809.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  ColumnCollection = <
+                    item
+                      SizeStyle = Absolute
+                      Value = 35.000000000000000000
+                    end
+                    item
+                      Value = 50.000000000000000000
+                    end
+                    item
+                      Value = 50.000000000000000000
+                    end>
+                  ControlCollection = <
+                    item
+                      Column = 0
+                      Control = imgEmail
+                      Row = 0
+                    end
+                    item
+                      Column = 1
+                      ColumnSpan = 2
+                      Control = edtEmail
+                      Row = 0
+                    end
+                    item
+                      Column = 0
+                      Control = imgLimiteCompras
+                      Row = 1
+                    end
+                    item
+                      Column = 1
+                      ColumnSpan = 2
+                      Control = edtLimite
+                      Row = 1
+                    end
+                    item
+                      Column = 1
+                      ColumnSpan = 2
+                      Control = picFoto1
+                      Row = 3
+                      RowSpan = 2
+                    end
+                    item
+                      Column = 0
+                      ColumnSpan = 3
+                      Control = lblFotoDoc
+                      Row = 2
+                    end
+                    item
+                      Column = 1
+                      ColumnSpan = 2
+                      Control = picFoto2
+                      Row = 5
+                      RowSpan = 2
+                    end
+                    item
+                      Column = 0
+                      Control = imgObs
+                      Row = 8
+                    end
+                    item
+                      Column = 1
+                      ColumnSpan = 2
+                      Control = edtObs
+                      Row = 8
+                      RowSpan = 2
+                    end
+                    item
+                      Column = 0
+                      ColumnSpan = 3
+                      Control = lblObs
+                      Row = 7
+                    end
+                    item
+                      Column = 0
+                      Control = btnFoto1
+                      Row = 3
+                    end
+                    item
+                      Column = 0
+                      Control = btnFoto2
+                      Row = 5
+                    end>
+                  RowCollection = <
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 35.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 150.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 150.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 35.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 100.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 10.000000000000000000
+                    end>
+                  object imgEmail: TGlyph
+                    AutoHide = False
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 6
+                    Images = ilCliente
+                  end
+                  object edtEmail: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 2
+                    KeyboardType = EmailAddress
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 264.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Email'
+                    StyledSettings = [Family, Style, FontColor]
+                    KillFocusByReturn = True
+                  end
+                  object imgLimiteCompras: TGlyph
+                    AutoHide = False
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 2
+                    Images = ilCliente
+                  end
+                  object edtLimite: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 1
+                    KeyboardType = DecimalNumberPad
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 264.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Limite de Compra'
+                    StyledSettings = [Family, Style, FontColor]
+                    KillFocusByReturn = True
+                  end
+                  object picFoto1: TImage
+                    MultiResBitmap = <
+                      item
+                        Width = 652
+                        Height = 700
+                        PNG = {
+                          89504E470D0A1A0A0000000D494844520000028C000002BC08060000006549EE
+                          7B000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                          070149444154785EEDC1010D000000C2A0F74F6D0E3720000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          0000000000000000000000000000000000000000000000000000000000000000
+                          B85203DF910001086801E20000000049454E44AE426082}
+                      end>
+                    Align = Client
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 264.000000000000000000
+                    Size.Height = 180.000000000000000000
+                    Size.PlatformDefault = False
+                    WrapMode = Place
+                  end
+                  object lblFotoDoc: TLabel
+                    Align = Client
+                    AutoSize = True
+                    StyledSettings = [Family, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 299.000000000000000000
+                    Size.Height = 25.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00060000000000000004000000}
+                    TextSettings.VertAlign = Trailing
+                    TextSettings.WordWrap = False
+                    Text = 'Foto do documento'
+                    TabOrder = 14
+                  end
+                  object picFoto2: TImage
+                    MultiResBitmap = <
+                      item
+                      end>
+                    Align = Client
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 264.000000000000000000
+                    Size.Height = 180.000000000000000000
+                    Size.PlatformDefault = False
+                    WrapMode = Place
+                  end
+                  object imgObs: TGlyph
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 10
+                    Images = ilCliente
+                  end
+                  object edtObs: TMemo
+                    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+                    DataDetectorTypes = []
+                    StyledSettings = [Family, Style, FontColor]
+                    TextSettings.Font.Size = 20.000000000000000000
+                    TextSettings.WordWrap = True
+                    Align = Client
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 264.000000000000000000
+                    Size.Height = 130.000000000000000000
+                    Size.PlatformDefault = False
+                    TabOrder = 17
+                    Viewport.Width = 264.000000000000000000
+                    Viewport.Height = 130.000000000000000000
+                  end
+                  object lblObs: TLabel
+                    Align = Client
+                    AutoSize = True
+                    StyledSettings = [Family, FontColor]
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 299.000000000000000000
+                    Size.Height = 25.000000000000000000
+                    Size.PlatformDefault = False
+                    TextSettings.Font.Size = 16.000000000000000000
+                    TextSettings.Font.StyleExt = {00060000000000000004000000}
+                    TextSettings.VertAlign = Trailing
+                    TextSettings.WordWrap = False
+                    Text = 'Observa'#231#245'es'
+                    TabOrder = 13
+                  end
+                  object btnFoto1: TButton
+                    Align = Client
+                    Images = ilCliente
+                    ImageIndex = 0
+                    Size.Width = 35.000000000000000000
+                    Size.Height = 40.000000000000000000
+                    Size.PlatformDefault = False
+                    StyleLookup = 'actiontoolbutton'
+                    TabOrder = 19
+                    Text = 'btnFoto1'
+                    OnClick = btnFoto1Click
+                  end
+                  object btnFoto2: TButton
+                    Align = Client
+                    Images = ilCliente
+                    ImageIndex = 0
+                    Size.Width = 35.000000000000000000
+                    Size.Height = 40.000000000000000000
+                    Size.PlatformDefault = False
+                    StyleLookup = 'actiontoolbutton'
+                    TabOrder = 18
+                    Text = 'btnFoto1'
+                    OnClick = btnFoto2Click
+                  end
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+  inherited ilPadrao: TImageList
+    Left = 272
+    Top = 28
+  end
+  object source: TBindSourceDB
+    DataSet = dmClientes.qry
+    ScopeMappings = <>
+    Left = 120
+    Top = 144
+  end
+  object bList: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 108
+    Top = 61
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Nome'
+      Control = lvLista
+      FillExpressions = <
+        item
+          SourceMemberName = 'Fone1'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Nome'
+      Control = edtNome
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'DtNasc'
+      Control = dtNasc
+      Track = False
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'CPF_CNPJ'
+      Control = edtCPF_CNPJ
+      Track = False
+    end
+    object LinkControlToField4: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Fone1'
+      Control = edtFone1
+      Track = False
+    end
+    object LinkControlToField5: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Fone2'
+      Control = edtFone2
+      Track = False
+    end
+    object LinkControlToField6: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Email'
+      Control = edtEmail
+      Track = False
+    end
+    object LinkControlToField7: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'RG'
+      Control = edtRG_IE
+      Track = False
+    end
+    object LinkControlToField8: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Sexo'
+      Control = swSexo
+      Track = True
+    end
+    object LinkControlToField9: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'LimiteCompras'
+      Control = edtLimite
+      Track = False
+    end
+    object LinkControlToField10: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Obs'
+      Control = edtObs
+      Track = False
+    end
+    object LinkControlToField11: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Endereco'
+      Control = edtEndereco
+      Track = False
+    end
+    object LinkPropertyToFieldBitmap: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Foto1'
+      Component = picFoto1
+      ComponentProperty = 'Bitmap'
+    end
+    object LinkPropertyToFieldBitmap2: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = source
+      FieldName = 'Foto2'
+      Component = picFoto2
+      ComponentProperty = 'Bitmap'
+    end
+  end
+  object ilCliente: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              033D494441546843ED98BB8B13411CC7F33C2B21219572BEB01211F5906B6C15
+              E5AEF11F104B5FB58FF6D06B6CACEC056DEC2C827A578BA56261B0537C70A009
+              099A48362FFDFE26DF5D375E263B93EC6537920F2CF39B99DFEFC77776766667
+              37312762922CB7F11BD0542401CD58916239B3CC071035F301444D4A769B61B0
+              DF83CDDB60B7B63F885EAF778329C6222949688F85BBBD4E9207A11753A9D463
+              56AD88C523542A951E6226CEB36A452C6640A8D56ACD5C2E7716E95EB2C988D0
+              DEC4930E2008C7712AD96CF615645CC6E3B6C5E6D919804BABD5DA5A5858380A
+              3955A95BAF01113A0C76EF3810BF07C5FD7E6D46DF03ED76FB0C4DFB47689A77
+              7B14AE9EFFF7282123F4C366232A958A837DFD0926EB12AE1368DA8D2B07FBB8
+              B4499FF828E769030123E976BBCF21F000DDB5888FF832CC1AA6D1433F2B20E8
+              2EC38D40485262FAD17630851EFA19334C3C9AB3B8D3CBB8AEF05A9636767B8C
+              330886EAA19F1110B089C25B27B0D3685B6B341A3F94838F66B3F90D0359A5AB
+              02CD321392C31886EAA15F2038C3FC82A04586B9628AFDDE91DC66884272482E
+              F605C2303DF40B04621F31440121D7D915087CCF314C21B9D8150843267F0F60
+              872DD25477BFD3E9DC643510087E4053E1CF654A182FB2372C85D33831EEA71D
+              482693398C5938C9AAE0CF65441833F085A6CCC0219A361C613990CB94890700
+              D1699A4297A50D03BB174D63C27884F6B214DEB3B4E1134BC19FCB883006B0C4
+              32812FA5D758C41F580D04C7E2CF786CFC9F905E2E53C2788456682AD2E9F435
+              9A816011DFC300BC2DF1DF5C1381644694CBE52676927D0C53A07E8BDD5AB085
+              BE40E13DFF8859945CFDDE6018A6877E4640CCC0514280A0551C1BCA7D8FBFD4
+              EBF59FF05F83E92D58D8D11D255C20609DA11E68760F735779E90E73EB2A8905
+              0CD5433F2B20E40EC38D4088DC79990D6B98420FFDAC81A00DDC69D30F9A0D86
+              59C334E61FF536C8E7623E9F7F8A1DE619AA6F517E9476A43C88423E2B57AAD5
+              EA8542A1B04BDAC7013995F61D19C034700710C68B2C52B403C05BF22BCDD8E1
+              D7A61D00DEA89B3463875FDBA835906FB55AEFF82F3236C8DDC737C7312C81D1
+              3F77C501E297B0DD151DC7F9CEE6C88086B26881F853AEF83973E624127F00CA
+              07B4313E1C4D9E0000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_add_a_photo_white_48dp.png'
+          end>
+        Name = 'iAddFoto'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              00E4494441546843EDD8C10A8250104661E969DAB4E909A3DAF5A62D2248D08D
+              DA3166DADCDA44E5CCE5FF202E9AC8198990DB888888FCCA344DBB61188E7698
+              CB1CCFE781214E763A079A9FF18E21F6F6756CB416F17DDF9F59D676495C4416
+              F15DD75D58F2C68FE3B8B14BE2A255F18BA0B5AE785CB3C76FED92B80855FC22
+              082DE2DBB6BD657EF27F61099FE31E8BC5CF2CE3AD95AD75E341E4FD0939EE95
+              F71FC811AC214220B8EA21E2BFCC39828B21D2BC4E3B9A35440834BF1C8225FE
+              8E8423B61822CD9E9023B6CE21D26C2D3A9A9F43A4DBDC75B4CFDBEB073B1411
+              11F9B2A6B903D41B14CEF182AD250000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_arrow_back_white_48dp.png'
+          end>
+        Name = 'iVoltar'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02C6494441546843ED994F6B13411C86F3A75544C482453C8817F1E0CD4BA127
+              412C05C18B9FA0E4A81711F4031444F0E241502F82F4A0372F8A88A7F652158D
+              8A12C58B441014249A98189336FF7C66E775D34D4A6262B2BBC57D6099D9FDFD
+              66F2BEB3B3B3B324161111111128719523A1D56A99FE9AF6CC4B1C541D290995
+              5B96C840D08CCC40B3D99CE5B8A6D32E889DE11939A2D3F080B0A3B55AED2DE2
+              FE8A46A3718B367BD43C38D09244CC552B6B30D6D6D63E63E2A0BA0A06C4DF90
+              9E2EAAD5EA578A34C74ABD5E7F954EA79B4E6003DCB50F98D8A9EEFC85DF9FB3
+              32DA6432993AA6AE206ABFD25CB8760823AB4A7521FFB252FC851F7E200D2E88
+              4C29BC29A44CD06ED9665B2A95CA370AFF57424D1117A6C37B857A82C9E36AE2
+              C2B51985876228F74C17CF2A9248245EA8DA8FE72A377258A57FB08A7CD1003A
+              30BF5F528C65AF331698CB0FADF4365C5B5438FC306F4F48B7074C2C113B4975
+              9B52C30B62EF58D9DDB0BAE489DF94D1709A41D824226F3B8A7B502C16CBE4DD
+              C34C8AD3DD6A1E1E1076B65C2EFFB0727B435E113317A986EBAE606217C785F5
+              F5F58F566A6F786FBC233FD8BDD066A02DCE31C7285F62697DBAD91EE80FE6AE
+              61E29F5E6263079DD3884C61E69995EDC5BCC12926941E6E30722A97CB55ADF4
+              365C5F504AF841EC31E97661BA2D2BBC3530CF86B43BF0E07F52682806DECC31
+              8AE64DDBC90185FB924C263D3BD77C3EBF57D5A118D8403C1E7FA3AA0B06E655
+              ED0B03E0113C3535F55D55FF601ABCB6036F31D300615D5F629D903393CD666B
+              6AE6C033F04861FF40C8827EDF45EBFA398EED4A73213C6962665B61B3DB70FD
+              B4D2FC8591BB2F0D1E0A85C22FEED013AA2BE6A0FEB8542AFD74821D1033DFC9
+              4975E92F8CDC0E4C2C5929838378F31134ADEE820323F3666F6365F5C73C0318
+              5FA43AA92EC20146661176DDCAEC86D85D72CE53DDA7262321FA7F2068220311
+              111111FF33B1D86FDE039171BF421C120000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_attach_money_white_48dp.png'
+          end>
+        Name = 'iMoney'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02C8494441546843ED99CD6B134118C6B3BB3908C188B4F88907415AB0205644
+              04414122E8B5072F153C0882074FFA0754F028F4E44910FF04B147F5D2DE0449
+              84045A11828760546463D27C7FF94CE731B026FB45B39311F607C3FB66F79D9D
+              E7DD99DD99D92462626262F464381C66DAEDF67758579ACDE6AF7EBFFF9455F4
+              A2D3E994A8D397C160B0C46ACA3169C7B06D7B9E6E10166895E39A403A9DDEA5
+              1B8423B4CA714DC0B2AC1ADD20E89780699A365D5FF0181CA7AB1CD7040CC3F8
+              4CD717247B89AE725C1300DBB4BEE472B965BC890EF2A71E40D06DF9920C06E2
+              6FB2AA52BC86D026DDA09CA1558A5702E55EAFB7C39F41D8A2558AD733201ECE
+              F7745D29140A7D8CA03B88FDC443FA80717D438EF0C954ABD53A4C86E1FA0171
+              161674E53DB5FF20167230E719AA2F586DAE4BC94ED03B5718A23710BA94CD66
+              07D43D0289BD6088FE40EC1BEA1E219202339B814301A117A9DB41B7DBFD0273
+              80617A835E782D653BC1F1E70CD11BF4C2A94AA5D2A06E0738B7C230BD81D0C7
+              D4EC402486731718A62FD06A62C8BC95B29D887901499C63A8BE40EB216CF8BF
+              4AD94E5AADD6CFFF2209885CAED56ABBD4EDA05EAFFFC6F9CB0CF504718B28D7
+              504EF3903AA03593CFE77B52B613DBB69B10758FA113C179C7F384DEFB81E1B9
+              01770DE71EA2ACA2DC42896EBB8A8BDF95CDBBF20A656C9E40BDAB9808C52AD6
+              17316122B127AC3A7D20E6C1A4A5C65F30D96D2366F4E10BFE092E0403238625
+              AB470344AD168BC52EDB1BA3542A7570175F22EE2C36491F7938146C2A3A20EE
+              7AD83B1B0636132D48E224EEF007B63955D844F4A0AD24127924C6AD6C7A3AF0
+              F2EA409B8731EE9F8957AA94B03F7859F5A0378E2291F5FD26C2CBCD0E683886
+              B2863DF6B73D4521E165660FB458E89515F15AC51CB123E5798338D7EFB406ED
+              CC40327330626BBA08ADE28F9205D87971BCD168CCA552A9723299BC6F18C63B
+              111F131313A31389C41F309EACD7DFE887F30000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_call_white_48dp.png'
+          end>
+        Name = 'iPhone'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0177494441546843ED994D4E84401085679ABFB58951478FE0C218AFE0C6BBE9
+              692671E5294C3C029AA8D1154943871EABCC4B47C234CE8FA105EADB503C3254
+              3DBA681A66260813678EEDC6AC0884DFCC09843BB1EFF914B683450C84A6D380
+              B57651D7F5526BFDCEBDCAE09003F2CEE0340EC82BCEC9B9293CC1A1B5786F18
+              FAE14155554F699A2E2005816A784992E44229F506A9817704E8EADF862E9EE1
+              1AE862DE61B785D7000DDF35C2E018636E10B6F01AC8F3FC146170B22C3B44D8
+              62DCB3D01018AF81A228F65AE3F4C5745A8857897D82B4BFE235400F3269A13E
+              98AE015E31FE04B203B203B203B203F2D67419907BA00F066FA0EB85A6D197DB
+              CCCD7FC1A6F9A58542230642230642B3D600CD6083780A33D242A119AD01B907
+              FA62F006BCAD5296E5F37FF83ACD1863B89633EC36F08E401CC70F0883134591
+              B716EF08586B8FC8F923393F861404FE83836A38A7D7814F480DBC23A0947A4D
+              92E4928CDC6BAD3F20F706E7A4DC4BAAE1CA57BC2008B3D917C56CF202A00320
+              740000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_date_range_white_48dp.png'
+          end>
+        Name = 'iData'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              014F494441546843EDD3BF4E844010C771B03014C6E49EC2C2C6C6E62A1A9FC5
+              985C616161A7EF65E90358F80C5412C34538C000FA1B778670BAFE234176CD7C
+              92CB71CBDEED772E21504A29A594FA87BAAE3BC0EB943FFA05E18755553DBC00
+              AE57BCEC078A2FCBF291E205D62EF8F6073BFCEE048AAFEBFA368AA2052FBD09
+              C3708F2FDD65FBE7D9356F7117228FBC8E2F8A626D7AB768FCA410E96F3C1ED8
+              63AFE3F33C7FE2E0218D9FD46CF13878BF6DDB1B0AE0A55FC37797B3C4E38045
+              D334777412058C1982E2B32CDBD06FBC3379FC2EE2EFCD59060FB1E42DDF9A2D
+              5E20E08C0FEC51D04F86C0D678D6783166086C89D334ADCCEE2D7F1B2F107BCE
+              013DFE7763DED2A335A7E2856D080EED87A06B27E3C55743E0DE89D3F1E2B321
+              922479E68F436EC50BDB10166EC60B045E9A4E2BB7E305426D43F8112F103C1C
+              C2AF788167E2CADB78A594524A8D1604AF7ED34D177862F68D0000000049454E
+              44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_done_white_48dp.png'
+          end>
+        Name = 'iDone'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0283494441546843ED97CF4EDB4010C69338710EF4520955407900DA4B91E011
+              38950BBC456FC073F450B8F11644A2EAA57D8772E82139E54053AAB66A0F4924
+              E78F5DBE713E2F8A376B3B8610ABDD9F14653C3B3B3BB33BE36C4A168BC562B1
+              C4098260DDF7FD4BCFF37EFD5D321283C402718DE14D51E6B702864F47A3D197
+              5AADB6415521180E87DF5DD77D592E97FF501552E1B702BBFFB668C10B087E0D
+              B19DF251A12580E3DAA358385019AF292AB4043A9DCE738A118798F895F2A3C1
+              350F274F13EAF5FA2A458596401CD45C0325F5428EAFD56A05542F0CACE163AD
+              B36AB5BA256B539D9D76BB3D0ADB9F501D82C7EDF178FC7932F2F0D0F736970B
+              998CDC41B5423B81C160A0BD9922B023578EE3ECC2CF71AFD7EB537D6FFAFD7E
+              0F3E4FE07B47D6A03A1FCD66731CA64AD0D40D1CE9268715A2C3D87B9AE5467C
+              24F86FD04CC16133F10404EC76170E8F216A2706DD01DED1D7A1E11C70CE01DD
+              28A073B0D651B7DB9553D1A0991924E0D35663568D0AD03DC16EBD4B9A1B211B
+              04DB5304B9C2E90A0CA7F6184DCDA405719F001E620338C54C162782940092D8
+              E7340586B412482A41F1314F09729A192410D03613D26808C2D8E4F24918BFA0
+              9BCC70BA997913109276380E6C129B340DBA3193278108538D47C8585A93A641
+              576668971B6C80D6E450676ED234E85231EBFF407A961990CB18EE336F44C6AE
+              9FE33EA5F5411EF04B3D15F3C2125814F104529BAEE8D80496CD5402287FE355
+              BAA8D8125A36F1046C093D36FF5602F8910B7005F8C6C7C2312B36ED047067F9
+              48B170388EF389A2426B5ADC229F21D32BD775D7A92A04F8D77683CD7D55A954
+              7E5215A29D000C7EC07007897CF03CEF37D54B4362402C9712533C788BC562B1
+              FCEF944AB73BE90BEB1C579F9A0000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_email_white_48dp.png'
+          end>
+        Name = 'iEmail'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              01F8494441546843ED97BF4AC35014C69B141A842E4541B1581D145FC04D0547
+              FF3C8C8BBE800E3E83EEAEBA561CECE4AC7341078B3A64100A4D8A4DEA77CC87
+              085AD3E4A6B941EE0F2EE724B9E79CEFDE2437372583C1603018B2240CC305B4
+              C3E170D8427B636BC939B9C66EC50322AB41105CB6DBED10FEAFC835E903B7CA
+              B0628099750683C17D24331EE92B310CD70F66F58CDAC6466218AE17CCE4321E
+              8D80BAC64662249669F481993CA1A6C4482CD3A4C6A64D0D74ECD04D0C6277E9
+              A6467900DD6E77956E627ABD9EF223A43C804AA5F24E3731E57239A09B1AE501
+              388EF3403731887DA49B1AE501589675453731886DD2D50796C2C5B4CB284C83
+              69F482E5F03492353E85F99009DC4ADC515B2C85DB4A08D0259BB90BD9B04532
+              7F22D7A40FDC626DE6BE03710DCCEE01ECD7761AA26F78AE18CFBCC1F08FB068
+              95C00B3A05B38597741DB68E360FBFEE79DE926DDB21F64B4FB01D9C7F46EBE0
+              0B7C0BDBC2390F560F10BD82B68F15A6E9BAAE0FC189901889951C928B69270F
+              8AADA1F035756486E494DC2C933DA8514391F3A8DCE4608D1ACB6603126EF8BE
+              EF7E56C801A985BBB1C9F26A20D174BFDF7F65EEDC40CD179819CA1849ECFF00
+              921C611599E5616EA0E61C26EF988723891D00926CD3CD1DBC0F7B744712FB1D
+              90DB49570BF866FCA951F997523766000683C16030E8A354FA005DFA64821AD3
+              03F80000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_person_white_48dp.png'
+          end>
+        Name = 'iNome'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0127494441546843ED994D4AC4401085F3433A398023516FE0C6C51C7336DE65
+              C08D1E420FE10FCEA0DB4E37E95815CA1E189885E0501578DF26AF2A90BCD7D5
+              81861400006087699AFA711CB7DEFB3D6953B027F646B217BB33A55C8B94D22A
+              C6F8E29CBB92964942081FE4F1B62CCB6FAEABB94B506363DD3C431E7B5AEC7B
+              290F13A011EDDAB6BD90D234C330ECBBAE5BB1CE01789F899CA189E47B1638E5
+              2F6FA1A58200DA9CED1B387EDE5F397EFF297FD842DA20803608A00D02688300
+              DA2C3EC0D9CE42FF0DCE425641006D10401B04D00601B4597C807CDE0921BC36
+              4D732DA569628C6FCEB91BD6790264FE51A479EABA7E127998404AE992923D2F
+              E007C73B2DF65D55553BAEF304A8F14937D614E4C17BFF256D33B027F2B6658F
+              BFE60100409BA2F8014125004F13581EE30000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_picture_in_picture_white_48dp.png'
+          end>
+        Name = 'iDoc'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0167494441546843ED98DD4AC340148483D877F3CA2B1F521014447CA8900750
+              EA6E3C13E6146D536D9AD96403E78390667FCECC40BA1BB60982200882602BF4
+              7D7F9B527ACA393FB049066AA23634D8A4C50AEF4CE0CDEE7DDBB65FCA10A885
+              9AA84D8D1DBB7458E15708380C71CFEEAB410D37EF98D633BB7598D09D097D52
+              63C09EF77342D0FC9EE506A0012D0ED1A20CB1B87947116235F30E431C1B4088
+              7F0DAC6EDEB9C608FA46E65C14BC085342D0BC7411907049886ACD3B0CF16B2D
+              F710D59B77CCD0613775BAAEFB18312FD9008B3016E227342FFF8E92C210999E
+              0F94327FC3BB9ACCFBB6D8F42B64C64E5622FC8971F1718021AA5B81CEEE05B8
+              F09BCD03185B4D88BFCC7308C66C771776AA0B31C5BCC310C77310E2EC9C22CC
+              31626326079742F3B35E85D54228CC3B8B87509A771862F42B964374A4945EA8
+              3100E139E61DAB71B27B173956B1BA4B1D6CBD438B5D5AAC70E9A3C54768B029
+              0882200882CA699A6F36D0CCA8DA5534230000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_clear_white_48dp.png'
+          end>
+        Name = 'iFechar'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02FC494441546843ED983B6F13411485FDC6B604292852A40344050DA1A141A0
+              482420212241E00FD042071D281DBF01A82841820E2880024A1A44075212691B
+              904522CB3678D7F8C5B9991328ACF1CCDA33F646F893463B3B7BEF3D6767671F
+              766AC68CFF9C34B763D3EBF50E6073B6DFEFAFA09D419BAFD56A0B8542A15B2A
+              952AE974FA1BDA47B4D768EFD17EABCC0400F3D75BAD5605A6AD40EC77E4DC60
+              FAF48089F96EB7FB92BE6283DC575283E5260B842F4451F4835E46466A482D96
+              9D0C221804418F1EC6466A811596F70B8416C230AC52DB1952536A53C61F9D4E
+              E703359D23B529E307CCD0356A79031A57296745ACF740BBDDDECCE57247B8EB
+              055C85AD7C3E7F94BBEEC0E42CAA393283C7E30BCCE41253E5CA2DC9180FDBB0
+              C85477A0E8BAAA3D1C98BDC79401E418C34CAC33C51D98C1B72CAE455E4C0CD7
+              8218E38B0F31EF18EE0EACFFAFACAF05337C9EE15A10764E45EB112D86BBA35E
+              AFFF627D2D3881430CD722310CD7D268347E32DC48865B231076F6E56A024BC8
+              DA977560B95CDE66570B3E914FB1ABC526C6466B0FEB13C866B31BEC6AC155BA
+              CBAE16C4DC61578B8DD61ED627003E71AB2593C95C84C1FBDC1D408E21E61277
+              8761D48A0DC4AFF01E3382352C2FB265A64AEEB28CF1B011D162AA11EB1B1375
+              F3CD667307EBF32087BC008D06340EE35E69736828D64B480A168BC5A7DCF506
+              349ED99A17E2DC0372128FD9F506341EB1EB077C2D7E562BD53D529B32D6C4BA
+              02029E220FD8758ECFDA7FC14465F0ADB2A5E6CC1DAC197B42470242ABBBAA6E
+              5965F9C980E7FA1B0A8F8D97CF671378D91C0F82A04B0F23C3BF548EB1EC64C1
+              CC3DA48F91911A2C3779A03F1745D1B6B2129F300C77B09963B9E900036BBB6E
+              46638D65A60B96C1131AB24672983E7DE0A78CE7F81765CD0C7F5F97999E0CF0
+              243959A9545ACAA21E8941EC09A6250B18BB459F5A10739BE1C9046BFB39BD0E
+              20C718965CE0B38835BEA12CFF03639BD81419966CB04C4E57ABD55059EFF7A5
+              2F633CBC3F80E1CBF84CE848933E87F717307E531A7767CC98E19C54EA0F2B93
+              354E7D9E1DF40000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_place_white_48dp.png'
+          end>
+        Name = 'iLocal'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              015A494441546843EDD73D4E03311005E0FD91776B248A0037A0A1E00A549C8A
+              9E86BBA4E5189C01D082486BD95AC34C788CB231444A10B14DE66BD6196DF15E
+              ECD52695522A16423819C7716EAD7D7D4F8C3370165ACE106FA2C655D08D47DE
+              FB0763CC29465970CE3D775D775ED7F502A3A5065741DFFE6D6EE119859F51B6
+              3B7C145101DAAE2B2CB34327E31A4B11151886E10CCBECF47D7F8CA5880A9446
+              0BA4F62F0B44EF869CE9114A4D9F81D476DE01FA513581B1C058602C3016186F
+              4D9F81D40EF7215EFE5D5A81B1C058602C3016186F4D8F506AC51788CEFB6FCE
+              E33EACBF33F408A5A60552D302FBE4BD7FC4521455A06DDB7B2C4531EF01E7DC
+              9331E6A2699A178C96263B40D977FE63F157ACB56F21843985BF5C0F1FE102BC
+              031BDCE0D63C51C04D05F20ECF28E44F05F20FCF28E87705CA08CF286CF39959
+              94139E51E0D50265856714FAAB4079E11905E702658657EA2055D5070CFAA288
+              36CA2EEB0000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_textsms_white_48dp.png'
+          end>
+        Name = 'iObs'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0188494441546843ED973F4AC5401087838A0710040B0B0B8B07E25D3C8177B0
+              F210DEC02B88A09DE7B0B1B0112D040B1B21FF13FD8D3B5BF84C361B85CC2CCC
+              0761DEBEEC26DF2F0FF26633C3300CA3EFFBA3BAAE9F3F41D775D728DB7C4A3F
+              903F2CCBF28DE43D087187B2C553F442F25555BD3AED9F20C42D8ADE10903B18
+              93F770884D5EA20B3CFD33A7190621AE503678992E2077E134C360DE252F9105
+              4FFD18C7290FBF890991E7F9074F9783E48BA278870C3ECE0B81F3373C55062F
+              CF3EF444A343344DF380B9BB3C6D79D6E53D312120FFA852DE130A817FE62794
+              3DFE7A7970F35548DE331402E3731CFB3C5C1E78ADD6DB83104321C480CF2C79
+              0F854039E1CBC800813FC9136DDBDEE357D8E14B2D0F1C4C5E0438A42B8F9BFF
+              DA8CC4A2427EAA9F1F83DB83A4E545DB039317216979384C6EC0C750218FD6F6
+              C5E9CC03F2B2FD3C1CFE258F22DACFA72B4F242D4F389D79A891279C523CAAE4
+              09A71587F8067C08A7360DC9E35529B7011F83FD82A89527D87114D5F2047B0E
+              A25EDE300C6321B2EC0BB15D90070D04CA720000000049454E44AE426082}
+            FileName = 'C:\Projetos\icons\1x\baseline_create_white_48dp.png'
+          end>
+        Name = 'iEditar'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'iAddFoto'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iVoltar'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iMoney'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iPhone'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iData'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iDone'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iEmail'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iNome'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iDoc'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iLocal'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iObs'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iFechar'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iEditar'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
+      end>
+    Left = 200
+    Top = 93
+  end
+  object actions: TActionList
+    Left = 156
+    Top = 248
+    object actLigar: TPhoneCallAction
+      Category = 'Phone Dialer'
+    end
+  end
+end
