@@ -24,14 +24,16 @@ type
     btnMenu: TButton;
     Button1: TButton;
     lbiProdutos: TListBoxItem;
-    StyleBook1: TStyleBook;
     ListBoxGroupHeader1: TListBoxGroupHeader;
     ListBoxItem3: TListBoxItem;
+    StyleBook1: TStyleBook;
     procedure btnClientesClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
     procedure btnMenuClick(Sender: TObject);
     procedure lbiProdutosClick(Sender: TObject);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
+      Shift: TShiftState);
   private
     { Private declarations }
     FFormularioAtivo: TForm;
@@ -117,8 +119,27 @@ begin
   dmConexao.Free;
 end;
 
+procedure TfrmPrincipal.FormKeyUp(Sender: TObject; var Key: Word;
+  var KeyChar: Char; Shift: TShiftState);
+begin
+  if Key = vkHardwareBack then
+  begin
+    MessageDlg('Do You Want To Close This Application',
+      TMsgDlgType.mtConfirmation, [TMsgDlgBtn.mbYes, TMsgDlgBtn.mbNo], 0,
+      procedure(const AResult: TModalResult)
+      begin
+        if AResult = mrYes then
+        begin
+          Application.Terminate;
+          Exit;
+        end
+      end);
+    Key := 0;
+  end;
+end;
+
 function TfrmPrincipal.HandleAppEvent(AAppEvent: TApplicationEvent;
-  AContext: TObject): Boolean;
+AContext: TObject): Boolean;
 begin
 
   (*

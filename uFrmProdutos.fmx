@@ -38,7 +38,7 @@ inherited frmProdutos: TfrmProdutos
         Size.Width = 313.000000000000000000
         Size.Height = 526.000000000000000000
         Size.PlatformDefault = False
-        TabIndex = 2
+        TabIndex = 1
         TabOrder = 0
         TabPosition = None
         Sizes = (
@@ -1770,6 +1770,7 @@ inherited frmProdutos: TfrmProdutos
                   StyleLookup = 'actiontoolbutton'
                   TabOrder = 0
                   Text = 'Editar dados'
+                  OnClick = btnEditarClick
                 end
               end
             end
@@ -1809,7 +1810,7 @@ inherited frmProdutos: TfrmProdutos
           CustomIcon = <
             item
             end>
-          IsSelected = False
+          IsSelected = True
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -1818,623 +1819,11 @@ inherited frmProdutos: TfrmProdutos
           Text = 'tabCad'
           ExplicitSize.cx = 8.000000000000000000
           ExplicitSize.cy = 8.000000000000000000
-          object vsCad: TVertScrollBox
-            Align = Client
-            Size.Width = 313.000000000000000000
-            Size.Height = 478.000000000000000000
-            Size.PlatformDefault = False
-            TabOrder = 0
-            Viewport.Width = 297.000000000000000000
-            Viewport.Height = 478.000000000000000000
-            object gridCadastro: TGridPanelLayout
-              Align = Horizontal
-              Size.Width = 297.000000000000000000
-              Size.Height = 800.000000000000000000
-              Size.PlatformDefault = False
-              TabOrder = 0
-              ColumnCollection = <
-                item
-                  SizeStyle = Absolute
-                  Value = 35.000000000000000000
-                end
-                item
-                  Value = 50.000000000000000000
-                end
-                item
-                  Value = 50.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 45.000000000000000000
-                end>
-              ControlCollection = <
-                item
-                  Column = 0
-                  Control = imProduto
-                  Row = 0
-                end
-                item
-                  Column = 1
-                  ColumnSpan = 3
-                  Control = edtNome
-                  Row = 0
-                end
-                item
-                  Column = 3
-                  Control = imValor
-                  Row = 2
-                end
-                item
-                  Column = 0
-                  Control = imCusto
-                  Row = 2
-                end
-                item
-                  Column = 0
-                  Control = imEAN
-                  Row = 4
-                end
-                item
-                  Column = 1
-                  ColumnSpan = 2
-                  Control = edtEAN
-                  Row = 4
-                end
-                item
-                  Column = 3
-                  Control = btnEAN
-                  Row = 4
-                end
-                item
-                  Column = 0
-                  Control = imEstoque
-                  Row = 6
-                end
-                item
-                  Column = 1
-                  Control = numValor
-                  Row = 2
-                end
-                item
-                  Column = 2
-                  Control = numCusto
-                  Row = 2
-                end
-                item
-                  Column = 1
-                  ColumnSpan = 3
-                  Control = gridEstoque
-                  Row = 6
-                end
-                item
-                  Column = 0
-                  ColumnSpan = 4
-                  Control = lblEstoque
-                  Row = 5
-                end
-                item
-                  Column = 0
-                  ColumnSpan = 2
-                  Control = lblValor
-                  Row = 1
-                end
-                item
-                  Column = 2
-                  ColumnSpan = 2
-                  Control = lblCusto
-                  Row = 1
-                end
-                item
-                  Column = 0
-                  ColumnSpan = 4
-                  Control = lblEAN
-                  Row = 3
-                end
-                item
-                  Column = 0
-                  ColumnSpan = 4
-                  Control = lblCatgoria
-                  Row = 7
-                end
-                item
-                  Column = 1
-                  ColumnSpan = 2
-                  Control = cbCategoria
-                  Row = 8
-                end
-                item
-                  Column = 3
-                  Control = btnAddCategoria
-                  Row = 8
-                end
-                item
-                  Column = 0
-                  Control = imCategoria
-                  Row = 8
-                end
-                item
-                  Column = 0
-                  ColumnSpan = 4
-                  Control = lblObs
-                  Row = 9
-                end
-                item
-                  Column = 0
-                  Control = imObs
-                  Row = 10
-                end
-                item
-                  Column = 1
-                  ColumnSpan = 3
-                  Control = edtObs
-                  Row = 10
-                end
-                item
-                  Column = 0
-                  ColumnSpan = 4
-                  Control = lblFoto
-                  Row = 11
-                end
-                item
-                  Column = 0
-                  Control = btnAddFoto
-                  Row = 12
-                end
-                item
-                  Column = 1
-                  ColumnSpan = 3
-                  Control = picFotoCad
-                  Row = 12
-                end>
-              RowCollection = <
-                item
-                  SizeStyle = Absolute
-                  Value = 40.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 30.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 40.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 30.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 40.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 30.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 150.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 40.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 40.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 30.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 100.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 30.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 150.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 40.000000000000000000
-                end
-                item
-                  SizeStyle = Absolute
-                  Value = 40.000000000000000000
-                end>
-              object imProduto: TGlyph
-                Align = Client
-                Size.Width = 35.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                Images = ilProdutos
-              end
-              object edtNome: TEdit
-                Touch.InteractiveGestures = [LongTap, DoubleTap]
-                Align = Client
-                TabOrder = 9
-                TextSettings.Font.Size = 16.000000000000000000
-                Size.Width = 262.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                StyledSettings = [Family, Style, FontColor]
-              end
-              object imValor: TGlyph
-                Align = Client
-                Size.Width = 45.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                ImageIndex = 2
-                Images = ilProdutos
-              end
-              object imCusto: TGlyph
-                Align = Client
-                Size.Width = 35.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                ImageIndex = 2
-                Images = ilProdutos
-              end
-              object imEAN: TGlyph
-                Align = Client
-                Size.Width = 35.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                ImageIndex = 7
-                Images = ilProdutos
-              end
-              object edtEAN: TEdit
-                Touch.InteractiveGestures = [LongTap, DoubleTap]
-                Align = Client
-                TabOrder = 1
-                TextSettings.Font.Size = 16.000000000000000000
-                Size.Width = 217.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                StyledSettings = [Family, Style, FontColor]
-              end
-              object btnEAN: TButton
-                Align = Client
-                Images = ilProdutos
-                ImageIndex = 11
-                Size.Width = 45.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                StyleLookup = 'actiontoolbutton'
-                TabOrder = 15
-              end
-              object imEstoque: TGlyph
-                Align = Client
-                Size.Width = 35.000000000000000000
-                Size.Height = 150.000000000000000000
-                Size.PlatformDefault = False
-                ImageIndex = 9
-                Images = ilProdutos
-              end
-              object numValor: TNumberBox
-                Touch.InteractiveGestures = [LongTap, DoubleTap]
-                Align = Client
-                TabOrder = 18
-                Cursor = crIBeam
-                Size.Width = 108.500000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-              end
-              object numCusto: TNumberBox
-                Touch.InteractiveGestures = [LongTap, DoubleTap]
-                Align = Client
-                TabOrder = 17
-                Cursor = crIBeam
-                Size.Width = 108.500000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-              end
-              object gridEstoque: TGridPanelLayout
-                Align = Client
-                Size.Width = 262.000000000000000000
-                Size.Height = 150.000000000000000000
-                Size.PlatformDefault = False
-                TabOrder = 19
-                ColumnCollection = <
-                  item
-                    Value = 50.000000000000000000
-                  end
-                  item
-                    Value = 50.000000000000000000
-                  end>
-                ControlCollection = <
-                  item
-                    Column = 0
-                    Control = Label2
-                    Row = 0
-                  end
-                  item
-                    Column = 1
-                    Control = sbEstoque
-                    Row = 0
-                  end
-                  item
-                    Column = 0
-                    Control = Label3
-                    Row = 1
-                  end
-                  item
-                    Column = 1
-                    Control = sbEstMin
-                    Row = 1
-                  end
-                  item
-                    Column = 0
-                    Control = Label4
-                    Row = 2
-                  end
-                  item
-                    Column = 1
-                    Control = sbEstMax
-                    Row = 2
-                  end>
-                RowCollection = <
-                  item
-                    Value = 33.333333333333350000
-                  end
-                  item
-                    Value = 33.333333333333330000
-                  end
-                  item
-                    Value = 33.333333333333320000
-                  end
-                  item
-                    SizeStyle = Auto
-                  end>
-                object Label2: TLabel
-                  Align = Client
-                  Anchors = []
-                  StyledSettings = [Family, Style, FontColor]
-                  Size.Width = 131.000000000000000000
-                  Size.Height = 50.000000000000000000
-                  Size.PlatformDefault = False
-                  TextSettings.Font.Size = 16.000000000000000000
-                  TextSettings.HorzAlign = Trailing
-                  Text = 'Estoque atual'
-                  TabOrder = 0
-                end
-                object sbEstoque: TSpinBox
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  Align = Client
-                  Anchors = []
-                  TabOrder = 1
-                  Cursor = crIBeam
-                  DecimalDigits = 0
-                  Max = 5000.000000000000000000
-                  Margins.Left = 15.000000000000000000
-                  Margins.Top = 12.000000000000000000
-                  Margins.Right = 15.000000000000000000
-                  Margins.Bottom = 12.000000000000000000
-                  Size.Width = 101.000000000000000000
-                  Size.Height = 26.000000000000000000
-                  Size.PlatformDefault = False
-                end
-                object Label3: TLabel
-                  Align = Client
-                  Anchors = []
-                  StyledSettings = [Family, Style, FontColor]
-                  Size.Width = 131.000000000000000000
-                  Size.Height = 50.000000000000000000
-                  Size.PlatformDefault = False
-                  TextSettings.Font.Size = 16.000000000000000000
-                  TextSettings.HorzAlign = Trailing
-                  Text = 'Estoque m'#237'n.'
-                  TabOrder = 2
-                end
-                object sbEstMin: TSpinBox
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  Align = Client
-                  Anchors = []
-                  TabOrder = 3
-                  Cursor = crIBeam
-                  DecimalDigits = 0
-                  Max = 5000.000000000000000000
-                  Margins.Left = 15.000000000000000000
-                  Margins.Top = 12.000000000000000000
-                  Margins.Right = 15.000000000000000000
-                  Margins.Bottom = 12.000000000000000000
-                  Size.Width = 101.000000000000000000
-                  Size.Height = 26.000000000000000000
-                  Size.PlatformDefault = False
-                end
-                object Label4: TLabel
-                  Align = Client
-                  Anchors = []
-                  StyledSettings = [Family, Style, FontColor]
-                  Size.Width = 131.000000000000000000
-                  Size.Height = 50.000000000000000000
-                  Size.PlatformDefault = False
-                  TextSettings.Font.Size = 16.000000000000000000
-                  TextSettings.HorzAlign = Trailing
-                  Text = 'Estoque m'#225'x.'
-                  TabOrder = 4
-                end
-                object sbEstMax: TSpinBox
-                  Touch.InteractiveGestures = [LongTap, DoubleTap]
-                  Align = Client
-                  Anchors = []
-                  TabOrder = 5
-                  Cursor = crIBeam
-                  DecimalDigits = 0
-                  Max = 5000.000000000000000000
-                  Margins.Left = 15.000000000000000000
-                  Margins.Top = 12.000000000000000000
-                  Margins.Right = 15.000000000000000000
-                  Margins.Bottom = 12.000000000000000000
-                  Size.Width = 101.000000000000000000
-                  Size.Height = 26.000000000000000000
-                  Size.PlatformDefault = False
-                end
-              end
-              object lblEstoque: TLabel
-                Align = Client
-                Anchors = []
-                StyledSettings = [Family, FontColor]
-                Size.Width = 297.000000000000000000
-                Size.Height = 30.000000000000000000
-                Size.PlatformDefault = False
-                TextSettings.Font.Size = 16.000000000000000000
-                TextSettings.Font.StyleExt = {00060000000000000004000000}
-                Text = 'Estoque'
-                TabOrder = 8
-              end
-              object lblValor: TLabel
-                Align = Client
-                Anchors = []
-                StyledSettings = [Family, FontColor]
-                Size.Width = 143.500000000000000000
-                Size.Height = 30.000000000000000000
-                Size.PlatformDefault = False
-                TextSettings.Font.Size = 16.000000000000000000
-                TextSettings.Font.StyleExt = {00060000000000000004000000}
-                Text = 'Valor'
-                TabOrder = 6
-              end
-              object lblCusto: TLabel
-                Align = Client
-                Anchors = []
-                StyledSettings = [Family, FontColor]
-                Size.Width = 153.500000000000000000
-                Size.Height = 30.000000000000000000
-                Size.PlatformDefault = False
-                TextSettings.Font.Size = 16.000000000000000000
-                TextSettings.Font.StyleExt = {00060000000000000004000000}
-                Text = 'Custo'
-                TabOrder = 3
-              end
-              object lblEAN: TLabel
-                Align = Client
-                Anchors = []
-                StyledSettings = [Family, FontColor]
-                Size.Width = 297.000000000000000000
-                Size.Height = 30.000000000000000000
-                Size.PlatformDefault = False
-                TextSettings.Font.Size = 16.000000000000000000
-                TextSettings.Font.StyleExt = {00060000000000000004000000}
-                Text = 'C'#243'digo de barras'
-                TabOrder = 2
-              end
-              object lblCatgoria: TLabel
-                Align = Client
-                Anchors = []
-                StyledSettings = [Family, FontColor]
-                Size.Width = 297.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                TextSettings.Font.Size = 16.000000000000000000
-                TextSettings.Font.StyleExt = {00060000000000000004000000}
-                Text = 'Categoria'
-                TabOrder = 5
-              end
-              object cbCategoria: TComboBox
-                Align = Client
-                Items.Strings = (
-                  'Categoria1'
-                  'Categoria2')
-                Size.Width = 217.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                TabOrder = 20
-              end
-              object btnAddCategoria: TButton
-                Align = Client
-                Images = ilProdutos
-                ImageIndex = 12
-                Size.Width = 45.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                StyleLookup = 'actiontoolbutton'
-                TabOrder = 13
-                OnClick = btnAddCategoriaClick
-              end
-              object imCategoria: TGlyph
-                Align = Client
-                Size.Width = 35.000000000000000000
-                Size.Height = 40.000000000000000000
-                Size.PlatformDefault = False
-                ImageIndex = 8
-                Images = ilProdutos
-              end
-              object lblObs: TLabel
-                Align = Client
-                Anchors = []
-                StyledSettings = [Family, FontColor]
-                Size.Width = 297.000000000000000000
-                Size.Height = 30.000000000000000000
-                Size.PlatformDefault = False
-                TextSettings.Font.Size = 16.000000000000000000
-                TextSettings.Font.StyleExt = {00060000000000000004000000}
-                Text = 'Observa'#231#227'o'
-                TabOrder = 7
-              end
-              object imObs: TGlyph
-                Align = Client
-                Size.Width = 35.000000000000000000
-                Size.Height = 100.000000000000000000
-                Size.PlatformDefault = False
-                ImageIndex = 10
-                Images = ilProdutos
-              end
-              object edtObs: TMemo
-                Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
-                DataDetectorTypes = []
-                Align = Client
-                Size.Width = 262.000000000000000000
-                Size.Height = 100.000000000000000000
-                Size.PlatformDefault = False
-                TabOrder = 23
-                Viewport.Width = 258.000000000000000000
-                Viewport.Height = 96.000000000000000000
-              end
-              object lblFoto: TLabel
-                Align = Client
-                Anchors = []
-                StyledSettings = [Family, FontColor]
-                Size.Width = 297.000000000000000000
-                Size.Height = 30.000000000000000000
-                Size.PlatformDefault = False
-                TextSettings.Font.Size = 16.000000000000000000
-                TextSettings.Font.StyleExt = {00060000000000000004000000}
-                Text = 'Foto do produto'
-                TabOrder = 4
-              end
-              object btnAddFoto: TButton
-                Align = Client
-                Images = ilProdutos
-                ImageIndex = 5
-                Size.Width = 35.000000000000000000
-                Size.Height = 150.000000000000000000
-                Size.PlatformDefault = False
-                StyleLookup = 'actiontoolbutton'
-                TabOrder = 14
-                OnClick = btnAddFotoClick
-              end
-              object picFotoCad: TImage
-                MultiResBitmap = <
-                  item
-                  end>
-                Align = Client
-                Size.Width = 262.000000000000000000
-                Size.Height = 150.000000000000000000
-                Size.PlatformDefault = False
-              end
-            end
-          end
           object tbCadastro: TToolBar
             Size.Width = 313.000000000000000000
             Size.Height = 48.000000000000000000
             Size.PlatformDefault = False
-            TabOrder = 1
+            TabOrder = 0
             object btnVoltar: TButton
               Align = Left
               Images = ilProdutos
@@ -2463,12 +1852,308 @@ inherited frmProdutos: TfrmProdutos
               OnClick = btnSalvarClick
             end
           end
+          object tcCadastro: TTabControl
+            Align = Client
+            FullSize = False
+            Size.Width = 313.000000000000000000
+            Size.Height = 478.000000000000000000
+            Size.PlatformDefault = False
+            TabIndex = 0
+            TabOrder = 1
+            TabPosition = PlatformDefault
+            Sizes = (
+              313s
+              452s
+              313s
+              452s)
+            object tabCadBasic: TTabItem
+              CustomIcon = <
+                item
+                end>
+              IsSelected = True
+              Size.Width = 96.000000000000000000
+              Size.Height = 26.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = ''
+              TabOrder = 0
+              Text = 'Dados b'#225'sicos'
+              object vsCad: TVertScrollBox
+                Align = Client
+                Size.Width = 313.000000000000000000
+                Size.Height = 452.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                Viewport.Width = 297.000000000000000000
+                Viewport.Height = 452.000000000000000000
+                object gridCadastro: TGridPanelLayout
+                  Align = Horizontal
+                  Position.Y = 16.000000000000000000
+                  Size.Width = 297.000000000000000000
+                  Size.Height = 950.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  ColumnCollection = <
+                    item
+                      SizeStyle = Absolute
+                      Value = 35.000000000000000000
+                    end
+                    item
+                      Value = 50.000000000000000000
+                    end
+                    item
+                      Value = 50.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 45.000000000000000000
+                    end>
+                  ControlCollection = <
+                    item
+                      Column = 0
+                      Control = imProduto
+                      Row = 0
+                    end
+                    item
+                      Column = 1
+                      ColumnSpan = 3
+                      Control = edtNome
+                      Row = 0
+                    end
+                    item
+                      Column = 3
+                      Control = imValor
+                      Row = 2
+                    end
+                    item
+                      Column = 0
+                      Control = imCusto
+                      Row = 2
+                    end
+                    item
+                      Column = 0
+                      Control = imEAN
+                      Row = 4
+                    end
+                    item
+                      Column = 1
+                      ColumnSpan = 2
+                      Control = edtEAN
+                      Row = 4
+                    end
+                    item
+                      Column = 3
+                      Control = btnEAN
+                      Row = 4
+                    end
+                    item
+                      Column = 0
+                      Control = imEstoque
+                      Row = 6
+                      RowSpan = 3
+                    end
+                    item
+                      Column = 1
+                      Control = numValor
+                      Row = 2
+                    end
+                    item
+                      Column = 2
+                      Control = numCusto
+                      Row = 2
+                    end>
+                  RowCollection = <
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end
+                    item
+                      SizeStyle = Absolute
+                      Value = 40.000000000000000000
+                    end>
+                  object imProduto: TGlyph
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 13
+                    Images = ilProdutos
+                  end
+                  object edtNome: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 2
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 252.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'Nome do produto'
+                    StyledSettings = [Family, Style, FontColor]
+                  end
+                  object imValor: TGlyph
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 35.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 2
+                    Images = ilProdutos
+                  end
+                  object imCusto: TGlyph
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 2
+                    Images = ilProdutos
+                  end
+                  object imEAN: TGlyph
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 7
+                    Images = ilProdutos
+                  end
+                  object edtEAN: TEdit
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 1
+                    TextSettings.Font.Size = 16.000000000000000000
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 207.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    TextPrompt = 'EAN'
+                    StyledSettings = [Family, Style, FontColor]
+                  end
+                  object btnEAN: TButton
+                    Align = Client
+                    Images = ilProdutos
+                    ImageIndex = 11
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 35.000000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                    StyleLookup = 'actiontoolbutton'
+                    TabOrder = 6
+                  end
+                  object imEstoque: TGlyph
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Align = Client
+                    Size.Width = 25.000000000000000000
+                    Size.Height = 110.000000000000000000
+                    Size.PlatformDefault = False
+                    ImageIndex = 9
+                    Images = ilProdutos
+                  end
+                  object numValor: TNumberBox
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 9
+                    Cursor = crIBeam
+                    Max = 10000000.000000000000000000
+                    ValueType = Float
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 98.500000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                  object numCusto: TNumberBox
+                    Touch.InteractiveGestures = [LongTap, DoubleTap]
+                    Align = Client
+                    TabOrder = 8
+                    Cursor = crIBeam
+                    Max = 10000000.000000000000000000
+                    ValueType = Float
+                    Margins.Left = 5.000000000000000000
+                    Margins.Top = 5.000000000000000000
+                    Margins.Right = 5.000000000000000000
+                    Margins.Bottom = 5.000000000000000000
+                    Size.Width = 98.500000000000000000
+                    Size.Height = 30.000000000000000000
+                    Size.PlatformDefault = False
+                  end
+                end
+              end
+            end
+            object tabCadExtra: TTabItem
+              CustomIcon = <
+                item
+                end>
+              IsSelected = False
+              Size.Width = 124.000000000000000000
+              Size.Height = 26.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = ''
+              TabOrder = 0
+              Text = 'Outras informa'#231#245'es'
+            end
+          end
         end
         object tabCategoria: TTabItem
           CustomIcon = <
             item
             end>
-          IsSelected = True
+          IsSelected = False
           Size.Width = 8.000000000000000000
           Size.Height = 8.000000000000000000
           Size.PlatformDefault = False
@@ -2575,29 +2260,29 @@ inherited frmProdutos: TfrmProdutos
             PNG = {
               89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
               87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-              02C8494441546843ED994F6B13411C86BB49AB8888058B78102FE2C19B97424F
-              82580A82173F41C9512F22E8072888E0C583A05E04E9416F5E14114F2D81AAC4
-              7F2855BC48044141A28989B1F9D7D467765E37DDA42426A6BB5BDC079699DDDF
-              6F26EF3B3B3B3B4B466262626242C5513914D6D6D64C7F4D7BE6C70155874A42
-              E596253610364333D06C36A738AEE9B403626778468EE8343A20EC68BD5E7F8B
-              B8BF627575F5166DF6A87978A0258998AB56567F54ABD5CF9838A8AEC201F137
-              A4A7834AA5F295E239C762A3D178954EA79B6E601DDCB50F98D8A9EE8285DF9F
-              B6325A2C2F2F3730750551FB95E6C1B543185952AA07F99795122CFCF00369F0
-              40644AE10D216594760B36DBB2B2B2F28D22F8955053C483E9F05EA1AE60F2B8
-              9A78706D52E18118C87D2693F1AD228944E285AABD78A6723D87550607ABC817
-              0DA00BF3FB25C5A6EC753605E6F2432BBD05D7E6148E3ECCDB13D2ED0313F3C4
-              4E52DDA6D4E882D83B567627AC2E79E23765349A66103686C8DBAEE22E148BC5
-              3279F73093E274B79A4707849D2D97CB3FACDCEE9057C4CC45AAD1BA2B98D8C5
-              71A156AB7DB452BBC37BE31DF9E1EE8536026D0EC734A37C89A5F5E9467BA03F
-              98BB86897F7A896D3AE89C40640A33192BDB8F7983538C2A3DDA60E4542E97AB
-              58E92DB83EAB94E883D863D2EDC1745B50786B609E0D6977E1C1FFA4D040F4BD
-              996314CD9BB69D030AF724994CFA76AEF97C7EAFAA03D1B701C771DEA8EA8181
-              19557BC200F8048F8F8F7F5735389806AFEDC05BCC344058C797583BE44C66B3
-              D9BA9AB9F00C3C5238381032ABDFF7D0BA7E8E63BBD23C088F9998D956D8EC16
-              5C3FADB46061E4EE4B838F42A1F08B3BF484EAA239A83F2E954A3FDD601BC4CC
-              7772525D060B23B70313F3564AFF20DE7C044DA8BBF0C0C88CD9DB5859BD31CF
-              00C6E7A88EA98B68809129845DB7323B2176979CF354F7A9C95088FF1F089BD8
-              404C4C4CCCFFCCC8C86F1DF89117447F833D0000000049454E44AE426082}
+              02C8494441546843ED994F6B13411C869BA45144C480453C8817F1E0CD4BA127
+              412C05C18B9FA0E4A81711F4031444F0E241502F82F4A0372F8A88E4D05E6AC4
+              BF2851BC48044141AA89A93169FEFA4CE675D36D426262B2BBC57D6099D9FDFD
+              66F2BEB3B3B3B36422242424C457222A4742B3D934FD35EC999B08A83A52A22A
+              B72CA101BF19998146A331C3714DA71D103BC3337244A7C1016147ABD5EA5BC4
+              FD15F57AFD166DF6A8B97FA0258698AB56D660ACAFAF7FC6C44175E50F88BF21
+              3D1D94CBE5AF14CF39966BB5DAAB542AD5680536C05DFB80899DEACE5BF8FD59
+              2BA34D2693A961EA0AA2F62BCD816B8730B2A25407F22F2BC55BF8E107D2E080
+              C8A4C25D216592764B36DB522A95BE5178BF126A8A38301DDE2BD4134C1E5713
+              07AE4D2B3C1443B94FA7D3AE55241A8DBE50B51FCF546EE4B04AEF6015F9A201
+              6CC1FC7E493196BDCE58602E3FB4D2DB706D41E1E0C3BC3D21DD2E30B148EC24
+              D56D4A0D2E88BD636577C2EA92237E5346836906617144DE6E29EE41A1502892
+              770F33494E77AB797040D8D962B1F8C3CAED0D7905CC5CA41AACBB82895D1C17
+              2A95CA472BB537BC37DE91EFEF5EA81B688B70CC32CA97585A9F74DB03FDC1DC
+              354CFCD34B6CECA0730A9149CC3CB5B2DD983738C5A4D2830D464EADAEAE96AD
+              F4365C9F574AF041EC31E97660BA2D29BC3530CF86B4B7E0C1FFA4D0500CBC99
+              6314CD9B76330714EE4B2C1673ED5C73B9DC5E55876260039148E48DAA0E1898
+              53B52F0C804B702291F8AEAA77300D5EDB81B7986980B08E2FB1CD90339DCD66
+              AB6AD68267E091C2DE819079FDBE83D6F5731CDB95E640386E62665B61B3DB70
+              FDB4D2BC8591BB2F0D2EF2F9FC2FEE509AEAB239A83F5E5B5BFBD90A6E8298F9
+              4E8EA94B6F61E4766062D14A191CC49B8FA02975E71F1899337B1B2BAB3FE619
+              C0F802D5B8BA0806189941D8752BB3136277C9394F759F9A8C84F0FF01BF090D
+              84848484FCCF4C4CFC06C70E90E4A175774F0000000049454E44AE426082}
             FileName = 'C:\Projetos\icons\1x\baseline_attach_money_white_48dp.png'
           end>
         Name = 'iMoney'
@@ -2613,8 +2298,8 @@ inherited frmProdutos: TfrmProdutos
             PNG = {
               89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
               87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-              0169494441546843ED98D16A83401045A534CFFE569FFAD48F2C145A28A57FE0
-              1FF8EEB3E007A4B4AB9D2B7742D93424EAACAE3007C464D79D7B2F989DB085E3
+              0169494441546843ED98D16A83401045A534BFE037F5A94FFDC842A18552FAE8
+              57F8EEB3E007A4B4AB9D2B7742D93424EAACAE3007C464D79D7B2F989DB085E3
               388EE3387B611886FB10C24BDFF74F1C320335511B1A1CB2450A1F44E043EE43
               5DD73F9621500B35519B1A074ED92185DF21A030C423A767831A6A5E11AD574E
               DB21420F6DDB7E5163A4699AEF2521B01635586E041AD0E223B6588658DDBC62
@@ -2624,7 +2309,7 @@ inherited frmProdutos: TfrmProdutos
               8C8B5F471822BB1DE8622FC0957D0FD86D23BBC5BC925D8829E615CCC56B18E2
               E29A242C3122CF4C0E6E0A8496BE0A9B85B030AFAC1EC2D2BC82B571EF481622
               84F0468D11AB862435CEBA77926315A9BBD6C1D627B438658B144E7DB4F80C0D
-              0E398EE3388E933945F10BB9FDC2C763B9FFBB0000000049454E44AE426082}
+              0E398EE3388E933945F10BAA28C2C712DA32640000000049454E44AE426082}
             FileName = 'C:\Projetos\icons\1x\baseline_clear_white_48dp.png'
           end>
         Name = 'iClose'
@@ -2641,7 +2326,7 @@ inherited frmProdutos: TfrmProdutos
               89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
               87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
               018B494441546843ED973F4AC4501087838A0710842D2C2C2C16C4BB7802EFB0
-              9587F0065E4104ED3C426A1B0B1B710BC1C2C640FE67FD8D6F5EE19ABC240A99
+              9587F0065E4104ED6C73051B0B1B710BC1C2C640FE67FD8D6F5EE19ABC240A99
               09CC0761F66DDE4BBE5F16B2F322C3300CA3699AD3A2285E37A0AEEB5B947D3E
               A51FC89F6459F64EF21E847840D9E3297A21F93CCFDF9CF64F10E21E456F08C8
               1D77C97B38C42E2FD1059EFECA698641881B941D5EA60BC85D39CD309877CD4B
@@ -2652,7 +2337,7 @@ inherited frmProdutos: TfrmProdutos
               E6BF3623435121DFD7CF77C1EDC1ACE545DB03931761D6F270E8DD8077A1421E
               ADEDDAE98C03F2B2FD3C1CFE258F22DACFCF579E98B53CE174C6A1469E704AC3
               51254F38AD61886FC0DB706AFD903C5E95721BF02ED82F885A79821D3B512D4F
-              B0672BEAE50DC33026228ABE00DFD78C3BDA72C8400000000049454E44AE4260
+              B0672BEAE50DC33026228ABE004D0E8BA882D13D960000000049454E44AE4260
               82}
             FileName = 'C:\Projetos\icons\1x\baseline_create_white_48dp.png'
           end>
@@ -2738,31 +2423,31 @@ inherited frmProdutos: TfrmProdutos
             PNG = {
               89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
               87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-              0316494441546843ED983B6F134110C7FDB65B4B04190B84A1A409111DA27089
-              5024A4744848F025E853F09268F80650D0D021458A44C857404A3A779806ECC4
-              C625E727FC67EFCFC9F7E276EF9CF810F7934EBB3B3B339ED9DDDBDD732E2323
-              23398BC5E2C92F43C486E6EB05813C604CC6C0F621DDAC0704B0DDE974668CC7
-              18B1858FBB7477BEE0876FF7FBFD316389CD6834FA89E20EDDAE06386CCCE7F3
-              3DCBB206EA57D688C420B1A0DA60782EF22C1D30B21BD3E9F4B852A95CA22815
-              4C26931E62BA91CFE74714290A2C1DA0F02A6DC10B88A981C17DCDA6836F0630
-              65A7D56AF5029BA9623C1E0F6AB5DA069B0A5F02B2EE584D255821AE987D4BE8
-              5F63A5090C87C331D6E97B4CE22334B7F0D4F96C894CFA4407EDB34396501CB0
-              D51D20C0AB74138AE840F723CD8CA19B70A86704027A41732D609287CD33DBDA
-              0CBA08877ADA4820347581AE1646FBBE3C52A7D8056C9F2B2706D0341CEA6981
-              000E50B87605B4DB3808BF288525286B534D81B6CC84F8D086A6E1502F92C160
-              6061742FD34C01F1AEDDFB5776A9AE808F2BE28B7D91D02C1CEA4582917B4713
-              05446DBB470BD74C882FCA23A18943EC6D14E7C93EAB0A2C91B7AC46329BCDDE
-              B0AAF0FA3221C939F099A58C7EAB5C2E476EA17F28954A2DB16153707C999224
-              816F2C859B2C4D584E60D997114912F0DDA31210DB5792049677A02396267459
-              0AAEDDCC84240938CB062F61172FF1573623115DB1615388B30415B113C04BB8
-              CDAA022FF1635623F1EA7A7D2502CEB4E041768D660A88750E3257F0E2632D07
-              998003E81085EF2A81EFD7AE525882B2A0AB84F8D086A6E1504F1B0410781345
-              97ECF5723ACB13789983FC251E23681A0EF58C40128137D230602223FFD4B636
-              832EC2A19E310848EB8306AAD745D7B632876E1C7C074890922EF2B958AFD73F
-              F06E738C52B65671294B6813E5BD5EAFB7D36C36CBA21F07F874C5BCD204CE03
-              6F02490EB254E04B00A764EC8BD55913149B2F019C929F584D1DC562F1905507
-              DF3B809DE422323D4AE19FBBDF31B89B8542E19422856F06A07002C55B4864DF
-              B2AC1F14AF0D8901B1EC494CDEE03332323232FE7772B9DF16DC8E31D33B4B32
+              0316494441546843ED984B8B134110C7F34EAE015762508C1EBDAC8B37F190A3
+              C882B03741D02FE17D0FBEC08BDF400F5EBC090B0BAEFB15845DC8DD78D16437
+              3147274FFD57CFDF21F372BA67B29B11E7074377575755AABA7BBA7B92CBC8C8
+              48CE62B178F2CB10B1A1F97A41200F189331B07D4837EB01016C773A9D19E331
+              466CE1E32EDD9D2FF8E1DBFD7E7FCC5862331A8D7EA2B843B7AB010E1BF3F97C
+              CFB2AC81FA95352231482CA836189E8B3C4B078CECC6743A3DAE542A97284A05
+              93C9A487986EE4F3F911458A024B0728BC4A5BF002626A60705FB3E9E09B014C
+              D969B55ABDC066AA188FC7835AADB6C1A6C29780AC3B56530956882B66DF12FA
+              D7586902C3E1708C75FA1E93F808CD2D3C753E5B22933ED141FBEC902514076C
+              750708F02ADD84223AD0FD483363E8261CEA1981805ED05C0B98E461F3CCB636
+              832EC2A19E3612084D5DA0AB85D1BE2F8FD4297601DBE7CA8901340D877A5A20
+              800314AE5D01ED360EC22F4A6109CADA5453A02D33213EB4A16938D48B643018
+              5818DDCB345340BC6BF7FE955DAA2BE0E38AF8625F24340B877A9160E4DED144
+              0151DBEED1C23513E28BF24868E2107B1BC579B2CFAA024BE42DAB91CC66B337
+              AC2ABCBE4C48720E7C6629A3DF2A97CB915BE81F4AA5524B6CD8141C5FA62449
+              E01B4BE1264B13961358F6654492047CF7A804C4F6952481E51DE888A5095D96
+              826B3733214902CEB2C14BD8C54BFC95CD4844576CD814E22C4145EC04F0126E
+              B3AAC04BFC98D548BCBA5E5F8980332D78905DA39902629D83CC15BCF858CB41
+              26E0003A44E1BB4AE0FBB5AB1496A02CE82A213EB4A16938D4D3060104DE44D1
+              257BBD9CCEF2045EE6207F89C7089A86433D239044E08D340C98C8C83FB5ADCD
+              A08B70A8670C02D2FAA081EA75D1B5ADCCA11B07DF0112A4A48B7C2ED6EBF50F
+              BCDB1CA394AD555CCA12DA4479AFD7EBED349BCDB2E8C7013E5D31AF3481F3C0
+              9B4092832C15F812C02919FB6275D604C5E64B00A7E427565347B1583C64D5C1
+              F70E6027B9884C8F52F8E7EE770CEE66A15038A548E19B01289C40F11612D9B7
+              2CEB07C56B4362402C7B129337F88C8C8C8C8CFF9D5CEE3727BF8E1942AC7583
               0000000049454E44AE426082}
             FileName = 'C:\Projetos\icons\1x\baseline_photo_camera_white_48dp.png'
           end>
@@ -2798,32 +2483,32 @@ inherited frmProdutos: TfrmProdutos
             PNG = {
               89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
               87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-              0320494441546843ED99BF6E134110C6EDB39DA442D84A2C9090780044434728
-              4814248BF018F0025041011D0F00823E204143041548D0409A04890EA5092520
-              90852B842573E73F7CE3FD72B275B7F6DEEEF96C0BFF9ADBF1CE7C33BBF67977
-              EF720B16FCE7E47975A6DBED9EC1A5D6EBF52E773A9DCD52A92476481004DF0A
-              85C25E3E9F7F0FF39DE779DF55CF1441D16751EC43147784C2132131887D201A
-              94CB0EE45F41F2FB8D46A3A5CAB14734440BCD15CA4F16CCD835DFF7BFAAF4E9
-              219AA2CD34E9831C32EB4F55BAC9C11CE97E1B102CB7DBED4FFD0C1920B9F06D
-              5498DE0DE82D41F04049670772EE6310CB2CC31E9B9F0D625E22F91625E4BED9
-              92CFD86D0C629E50C20E24BE4E2D63107397E111A48F6EC620E606C39381D893
-              CD66F3B792310333F686E15AE0F39AEE46B08632C3CD41A2474AC21CCCD626C3
-              B5C06D43799B835A1E33DC0CC4ACD6EBF5BF2ADC1C0CE00425B4880FDD8D915A
-              10B74689213C5E8780F3AD6AB5BA4473EA482D18C74D9AA381A3D76AB51AFDA1
-              276783325AC447B9260335FDC22576C287C0ECAFAB90E44CE2261E04B55DA44C
-              48DC88C6CEA20E6C91AF22C93D9A11A40F3EDB346D185F1B66689703B6061AB2
-              90D5282985D7E433765B038D17940C891C68B0841FE2E0718EE64C81011C168B
-              C5F334FB447E4218C02936670ED4769ACD90C80070C04867173801505B64458E
-              0C0067D6369B33076AEBB019121940A552F9C3A616DC94AF704F5D81601F69CB
-              67EC1E8B6DBC496DF23BFB0C412D48E4B4DB748997DAE8AA67D4DF28FA9C16AA
-              14E277E9A607B37087FE11D0E7B4DB748D07B7E9A607492ED13902FA9C769B29
-              C4AFD32D24EE5FE82008821F346706DFF77FA2B68F3443E206D0C54ABC437308
-              F45D6053CB281F9778ACC03B521BCDD1E0AB5A8B3BD04CEB26662DAB74310342
-              B1474A0C6EE46E936E5A6CE2514BB223A580B8B2EE500F41A7DD669278EB43BD
-              00E1C48F55D20635D83D56390633F38C5A9983DCCF59863D9881652CE1FBD4CC
-              0CC929B959861B10AA40703E1FEE1E03DDF97DBC3E0866663E5F700C827CF3FB
-              8A6910CC98CB4BBE2F88757EC997F56BD60FD8CFECC17C3B13AF59172C987B72
-              B97FDF7B8AF726D3E3E40000000049454E44AE426082}
+              0324494441546843ED99BD6E13411485EDB59DB842D84A2C9090780044434728
+              4814240B780C7801A8A0808E0700411F90A021820A2468204D824487D2400918
+              64E10A61C9ECFA8773BD272B5BE3B16767D66B5BF86B7666E7DE73EFCC7A3C33
+              BB99254BFE73B2BC3AD3ED764FE152EDF57A173B9DCE56A150907A441004DF72
+              B9DC5E369B7D87EA5BCFF3BE872D3304499F46B20F90DC67241E0BF181EF7DD1
+              A05C7A207E11C1EF351A8D56988E3DA2215A2816293F5D3062577DDFFF1A864F
+              0ED1146D86491EC490517F12869B1E8C91ECD38060A9DD6E7FEC4748018985A7
+              51667837A0B702C183503A3D10731F9D58651AF6D8FC6CE0F302C1B72921F366
+              5BEEB1D918F83CA6841D087C8D5AC6C0E70EDD15A48D66C6C0E73ADDE301DFE3
+              CD66F37728630646EC35DDB5C0E615CD8D600E25BA9B83400F430973305A5B74
+              D702B3CDD0DA1CE4F288EE66C067AD5EAFFF0DDDCD41078E51428BD8D0DC18C9
+              057EEB9418C2E3750818DFAC542A2BACCE1CC905FDB8C1EA7860E8B55AAD46BF
+              EBF1D9A48C16B1094DE3819C7EE13272C087C0E86F842EF199C6241E04B99DA7
+              4CC4A81E4D1C451DD8225F4690BBAC2A481B6CAEB06AC3E4DC3042BBECB035D0
+              9085AC4A4949BC2AF7D86C0D349E53324239D060093FC4C1E30CAB73053A7098
+              CFE7CFB2DA47F909A10327589C3B90DB491623940ED46AB56476815300B9292B
+              B2D28162B1D86671EE406E1D1623940E94CBE53F2C6AC1A47C8939750907F43E
+              52967B6C9E88ADBF496EF23BFB04412D08E4B4DB74F197DC68AA67DCDF28DA9C
+              16AA04FC7769A607A3709BF60A6873DA6DBAFA835B34D383201768AC8036A7DD
+              6602FE1B348B502631E6D44110043F589D1B7CDFFF89DC3EB01A31AA035DACC4
+              3BAC0E81B6732C6A1967E3E28F1578477263753C7854EBA30E34B39AC4CC658D
+              26664068E491129D1BBBDBA499161B7FE412EF4829C0AFA43BD443D069B719C7
+              DFFA502F4038F66B95A4410E76AF558EC0C83CA556EA20F633A6610F4660154B
+              F83E355343624A6CA6E10684CA105CCC97BB474077715FAF0F829159CC0F1C83
+              20DEE27E621A0423E6F291EF0B7C9D3FF2A5FD99F53DF6337BA8BE998BCFAC4B
+              962C3C99CC3FBFD18AF73F5A4FFE0000000049454E44AE426082}
             FileName = 'C:\Projetos\icons\1x\baseline_group_work_white_48dp.png'
           end>
         Name = 'iCategoria'
@@ -2858,18 +2543,18 @@ inherited frmProdutos: TfrmProdutos
             PNG = {
               89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
               87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-              015B494441546843EDD73D4E03311005E0FD9137351245801BD050E40A549C8A
-              9E86BBA4E5189C019040506C63D95AC3CCF2186563889420629BCCD7AC33DAE2
-              BDD8AB4D2AA5542C8470320CC3D25AFBF29E1867E02CB49C23DE448DABA01B8F
-              BCF7F7C698538CB2E09C7BEABAEEBCAEEB378C460DAE82BEFD9BDCC2330A3FA7
-              6CB7F828A202B45D975866874EC61596222AD0F7FD1996D999CD66C7588AA840
-              69B4406AFFB240F46EC8991EA1D4F419486DE71DA01F5513180B8C05C6026381
-              F1D6F41948ED701FE2F1EFD20A8C05C6026381B1C0786B7A84522BBE4074DE7F
-              731EF761FD9DA14728352D909A16D827EFFD0396A2A8026DDBDE61298A790F38
-              E71E8D31174DD33C63349AEC0065DFF98FC55FB1D6BE861096147EB11E3EC205
-              780736B8C6AD79A2809B0AE41D9E51C89F0AE41F9E51D0EF0A94119E51D8E633
-              B328273CA3C0AB05CA0ACF28F45781F2C2330ACE05CA0CAFD441AAAA0F3979A2
-              A399DDD41B0000000049454E44AE426082}
+              015A494441546843EDD73F4EC3301406F0FC91931989A1C00D5818B80213A762
+              67E12E5D390667002422582D5B31BC173E9E9A1A2AB588DAA6EFB7C47DCAF07D
+              B5A3B495522A16423819C77169AD1DDE13E30C9C85960BC49BA9711574E391F7
+              FEC118738A51169C73CF5DD79DD775FD86D1A4C155D0B77F9B5B7846E11794ED
+              0E1F455480B6EB0ACBECD0C9B8C6524405866138C3323B7DDF1F6329A202A5D1
+              02A9FDCB02D1BB21677A8452D36720B59D77807E54CD602C3016180B8C05C65B
+              D36720B5C37D88A7BF4B2B3016180B8C05C602E3ADE9114AADF802D179FFCD79
+              DC87F577861EA1D4B4406A5A609FBCF78F588AA20AB46D7B8FA528E63DE09C7B
+              32C65C344DF382D164B603947DE73F167FC55AFB1A425852F8CBF5F0112EC03B
+              B0C10D6ECD1305DC5420EFF08C42FE5420FFF08C827E57A08CF08CC2369F9945
+              39E119055E2D50567846A1BF0A94179E51702E506678A50E52557D00C17EA28E
+              523DB6450000000049454E44AE426082}
             FileName = 'C:\Projetos\icons\1x\baseline_textsms_white_48dp.png'
           end>
         Name = 'iObs'
@@ -2885,38 +2570,39 @@ inherited frmProdutos: TfrmProdutos
             PNG = {
               89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
               87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
-              03E8494441546843ED984B6B135114C79349D2508248B14A8B8AD1A5E2035CE9
-              2AEB5AADB8736517AEDC8882A02BBBF0F50D5C5A7CEC5C088A60EC5710A3080A
-              2E8C082D888F85AD793449FD9F3BFF0C733399CCDC99A4A9901F0CF7DE73CF39
-              73CEDCD7CC24468C18315C565757FFACAFAF7F6A369B2F5AADD6C58D8D8D0976
-              FD1F20600D24544332F791CC1EAA6C6D1A8D46494681F13B405641127354DBFA
-              20D8C3B86ED46AB565E6A080EC325506076E728DF70B0D4D3DA02B037F376D2D
-              351268B6CEB0BBFFC0F979DECB089A2730DF9FA2791D7E4E50A440FB92ADA992
-              F88BF66E76F50F389D85F306EF63045D688B18C93C81CF6DEC12FFCE48A0EF31
-              C5FD01CE4F22F81AFD1B43379E5D085BEA4714DBD997AED7EB65D50170CFFDCA
-              2808E84E21E3E7D56AF5876DDA7F782BB9D724023B8DC5BB62F7A8A7FD88DDDA
-              5442FD2AC5FE406FA273271804BC9D03829BAE542A3FA50F23DB447B9FC8D19C
-              149980C45E2BE55E406FD1561F2C32BA32CAA84EF1D672EF79D50990C0158AE5
-              ACF820324CAFCF1439582C1DF0F44FB13A50B2D9EC0ECBB26631C7DF22D89D22
-              438C45D509503FC86A22994C7E9312B14D2B818B244B07C994D54D03093C4CA5
-              5217D834C23302C3005363865563FA3A026B6B6BB5F1F1F16718F297B8DE4354
-              B67B1279B83D826B060BF56C2E97CB526E0CFC7A62D69004A28005596CEF1CBD
-              101DE8BEA2993174E30FF58C404077691E0A98246173DBB636832EFCA15E6824
-              109A6AA02B8FA73D2797D429D680ED1DE5C4009AFA43BD502080220A6D4EA25D
-              C0A2FCA2145C5056A09A026D1909F1111A9AFA43BD40705A56F174B5AF268817
-              ECDE9E2C505D011F7BC517FB02A1993FD40B044F4E7B3B84A860F784421B09F1
-              4579203471887C0EC856C9AA02536491D540F06AF0805545A72F13E21C646F58
-              CAD3CF673299C02DB44D3A9D9673C1BDB01D5FA6C4496099A5708CA509EE04DC
-              BE8C889340EF13D18CC8BEE224E0DE814A2C4D68BF660891FF01C549C0993658
-              84652CE2AF6C0622BA62C3A610650A2A2227804538CBAA028B789ED5403A753B
-              7DC502CE42C1834CFBC88638CC41A6052F3E8672900938809650785E25DC7F12
-              DA50D6ED55427C8486A6FE502F3408A0EB9B28BA64AF97D359AEAE2F7390DFC3
-              65044DFDA19E1148A2EB1BA91F3091277FCBB636832EFCA19E310828D4070D54
-              0F88AE6D650EDD38780E906E4A61717F52A2F90EA56CADE252A6D05194F24979
-              0E9F9419D18F027C6A31F73581CDA033813807D996C093004EC9C82F5683A65B
-              6C9E04704A06FF7F1C12A9546A895507CF1AC04EB20B9996C6C6C63CBFF18609
-              0EC215C474084BE037450ACF085896F51DA3701C89C8EFF55F140F0D89416291
-              983A831F31624422F10F6F5D53E41595BE720000000049454E44AE426082}
+              03EE494441546843ED984B6B135114C79349D2ACC4B6566951B1BA547C802B5D
+              755DAB1577AEECC2951B5110746517BEBE81CB161F3B17822258FB15C42A8282
+              0B2B420B629282C53C9A87FF73E79F616E2693993B933415F283E1DE7BEE3967
+              CE99FB9A99C4800103FACBE6E6E69FADADADAFB55AED75BD5EBFDA683446D8F5
+              7F80803572B95C19C93C463207A8B2B3A956AB2B320A8CDFA150281491C42CD5
+              763E08F638AE3BE572798D392820BB4E95DE819BDCE2FD4243530FE8CAC0DF5D
+              5B4B4D2934EB17D8DD7DE0FC32EF6504CD1398EF2FD0BC0D3F672852A07DCDD6
+              6C34363636FEA2BD9F5DDD034E67F084AABC8F1174A12D6224F31C3E77B14BFC
+              3B2381BE67147707383F2B3B06FD1B43379E5D085BEA1714BBD997AE542AABAA
+              03E09E87955110D01D47C6AF4AA5D26FDBB4FBF05672AF3104761E8B77DDEE51
+              4FFB29BBB5A984FA4D8AFD81DE48EB4ED00B783B070437512C1673D28791ADA1
+              7D48E4688E894C4062EF947227A0B768ABF716195D196554C7796BB9F79CEA04
+              48E006C572567C1619A6D7378A1C2C960E78FAE758ED29D96C768F65593398E3
+              1F10EC5E9121C625D509503FCA6A22994CFE9412494F28818B244B07C994D56D
+              03093C49A55257D834C23302FD0053639A5563BA3A02F97CBE3C3C3CFC1243FE
+              06D7278856ED9EC424DC9EC0358D43E9E2E8E868967263E0D713B3862410052C
+              C8A5E6CED109D181EE5B9A194337FE50CF0804F490E6A180491236F76D6B33E8
+              C21FEA854602A1A906BA26F1B467E5923AC51AB07DA09C1840537FA8170A04B0
+              84429B93684F61517E570A2E289BA29A026D1909F1111A9AFA43BD40705A96F0
+              74B5AF2688E7EDDE8ECC535D011F07C517FB02A1993FD40B044F4E7B3B8468CA
+              EE09853612E28BF24068E210F91C90AD925505A6C822AB81E0D560815545AB2F
+              13E21C64EF59CAD39FCC6432815B6893743A2DE7827B613BBE4C8993C01A4BE1
+              144B13DC09B87D19112781CE27A219917DC549C0BD03ADB034A1F99A2144FE07
+              14270167DA6011AE6211FF603310D1151B36852853501139012CC219561558C4
+              73AC06D2AADBEA2B1670160A1E64DA4736C4610E322D78F1D197834CC001B48C
+              C2F32AE1FE93D084B276AF12E2233434F5877AA141006DDF44D1257BBD9CCE72
+              B57D9983FC112E2368EA0FF58C40126DDF48FD80893CF97BB6B51974E10FF58C
+              4140A13E68A07A44746D2B73E8C6C17380B4530A8BFB9312CD8F28656B159732
+              854EA2944FCA4BF8A4CC887E14E0538BB9AB096C07AD09C439C876049E04704A
+              467EB1EA35ED62F324805332F8FF639F48A552CBAC3A78D60076927DC8746568
+              68C8F31BAF9FE0205C474CC7B0040A14293C236059D62F8CC2692422BFD7F314
+              F70D89416291985A831F30604022F10F470F5309CC7F485D0000000049454E44
+              AE426082}
             FileName = 'C:\Projetos\icons\1x\baseline_linked_camera_white_48dp.png'
           end>
         Name = 'iCapt'
@@ -2939,6 +2625,26 @@ inherited frmProdutos: TfrmProdutos
             FileName = 'C:\Projetos\icons\1x\baseline_add_white_48dp.png'
           end>
         Name = 'iAdd'
+      end
+      item
+        MultiResBitmap.Height = 48
+        MultiResBitmap.Width = 48
+        MultiResBitmap.LoadSize = 0
+        MultiResBitmap = <
+          item
+            Width = 48
+            Height = 48
+            PNG = {
+              89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+              87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              006C494441546843EDD6C10A80201000D1B5FFFFE792D82E8997D0066BDE454F
+              C2808B8624A14AAE8DBDCAED23A5CAED69F479972DD765194033806600CD009A
+              01B4D7FE42B3788568CE40CF7D0666CD945788F6DD1918CD19E83080E63B4033
+              806600CD009A01340324E9CF220E3D6A20444B8E639E0000000049454E44AE42
+              6082}
+            FileName = 'C:\Projetos\icons\1x\baseline_dashboard_white_48dp.png'
+          end>
+        Name = 'iProd'
       end>
     Destination = <
       item
@@ -3044,6 +2750,14 @@ inherited frmProdutos: TfrmProdutos
             SourceRect.Right = 48.000000000000000000
             SourceRect.Bottom = 48.000000000000000000
           end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'iProd'
+            SourceRect.Right = 48.000000000000000000
+            SourceRect.Bottom = 48.000000000000000000
+          end>
       end>
     Left = 119
     Top = 328
@@ -3059,7 +2773,7 @@ inherited frmProdutos: TfrmProdutos
     OutputConverters = <>
     Left = 164
     Top = 61
-    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+    object linkGridCat: TLinkGridToDataSource
       Category = 'Quick Bindings'
       DataSource = sourceCat
       GridControl = sgCatProd
@@ -3074,13 +2788,6 @@ inherited frmProdutos: TfrmProdutos
           Width = 200
           ColumnStyle = 'StringColumn'
         end>
-    end
-    object LinkPropertyToFieldBitmap: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'Foto'
-      Component = picFotoDetalhe
-      ComponentProperty = 'Bitmap'
     end
     object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
@@ -3099,83 +2806,6 @@ inherited frmProdutos: TfrmProdutos
       FillHeaderExpressions = <>
       FillHeaderFieldName = 'CATEGORIA'
       FillBreakGroups = <>
-    end
-    object LinkControlToField1: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'Nome'
-      Control = edtNome
-      Track = False
-    end
-    object LinkControlToField2: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'Estoque'
-      Control = sbEstoque
-      Track = False
-    end
-    object LinkControlToField3: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'Valor'
-      Control = numValor
-      Track = False
-    end
-    object LinkControlToField4: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'Custo'
-      Control = numCusto
-      Track = False
-    end
-    object LinkControlToField5: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'EstMin'
-      Control = sbEstMin
-      Track = False
-    end
-    object LinkControlToField6: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'EstMax'
-      Control = sbEstMax
-      Track = False
-    end
-    object LinkControlToField7: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'EAN'
-      Control = edtEAN
-      Track = False
-    end
-    object LinkFillControlToField1: TLinkFillControlToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'IdCat'
-      Control = cbCategoria
-      Track = True
-      FillDataSource = sourceCat
-      FillValueFieldName = 'Id'
-      FillDisplayFieldName = 'Nome'
-      AutoFill = True
-      FillExpressions = <>
-      FillHeaderExpressions = <>
-      FillBreakGroups = <>
-    end
-    object LinkPropertyToFieldBitmap2: TLinkPropertyToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'Foto'
-      Component = picFotoCad
-      ComponentProperty = 'Bitmap'
-    end
-    object LinkControlToField8: TLinkControlToField
-      Category = 'Quick Bindings'
-      DataSource = source
-      FieldName = 'Obs'
-      Control = edtObs
-      Track = False
     end
   end
   object sourceCat: TBindSourceDB

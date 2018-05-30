@@ -55,48 +55,19 @@ type
     edtEAN: TEdit;
     btnEAN: TButton;
     imEstoque: TGlyph;
-    sbEstoque: TSpinBox;
     numValor: TNumberBox;
     numCusto: TNumberBox;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    sbEstMin: TSpinBox;
-    sbEstMax: TSpinBox;
-    gridEstoque: TGridPanelLayout;
-    lblEstoque: TLabel;
-    lblValor: TLabel;
-    lblCusto: TLabel;
-    lblEAN: TLabel;
-    lblCatgoria: TLabel;
-    cbCategoria: TComboBox;
-    btnAddCategoria: TButton;
-    imCategoria: TGlyph;
-    lblObs: TLabel;
-    imObs: TGlyph;
-    edtObs: TMemo;
-    lblFoto: TLabel;
-    btnAddFoto: TButton;
-    picFotoCad: TImage;
     sourceCat: TBindSourceDB;
     sgCatProd: TStringGrid;
-    LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource;
+    linkGridCat: TLinkGridToDataSource;
     navigation: TBindNavigator;
-    LinkPropertyToFieldBitmap: TLinkPropertyToField;
     LinkListControlToField1: TLinkListControlToField;
-    LinkControlToField1: TLinkControlToField;
-    LinkControlToField2: TLinkControlToField;
-    LinkControlToField3: TLinkControlToField;
-    LinkControlToField4: TLinkControlToField;
-    LinkControlToField5: TLinkControlToField;
-    LinkControlToField6: TLinkControlToField;
-    LinkControlToField7: TLinkControlToField;
-    LinkFillControlToField1: TLinkFillControlToField;
-    LinkPropertyToFieldBitmap2: TLinkPropertyToField;
-    LinkControlToField8: TLinkControlToField;
     tbCategoria: TToolBar;
     btnVoltarCategoria: TButton;
     Label5: TLabel;
+    tcCadastro: TTabControl;
+    tabCadBasic: TTabItem;
+    tabCadExtra: TTabItem;
     procedure FormCreate(Sender: TObject);
     procedure btnBackClick(Sender: TObject);
     procedure lvListaItemClick(const Sender: TObject;
@@ -106,9 +77,13 @@ type
     procedure btnSalvarClick(Sender: TObject);
     procedure btnAddFotoClick(Sender: TObject);
     procedure btnVoltarCategoriaClick(Sender: TObject);
+    procedure btnAddClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
   private
     { Private declarations }
     procedure visualizar;
+    procedure editar;
+    procedure cadastras;
     procedure mudarFoto(image: TImage; nomeField: String);
   public
     { Public declarations }
@@ -129,10 +104,19 @@ begin
 
 end;
 
+procedure TfrmProdutos.btnAddClick(Sender: TObject);
+begin
+  inherited;
+
+  dmProdutos.qryProd.Append;
+  tcFunc.ActiveTab := tabCad;
+
+end;
+
 procedure TfrmProdutos.btnAddFotoClick(Sender: TObject);
 begin
   inherited;
-  mudarFoto(picFotoCad, 'Foto');
+ // mudarFoto(picFotoCad, 'Foto');
 end;
 
 procedure TfrmProdutos.btnBackClick(Sender: TObject);
@@ -140,6 +124,14 @@ begin
   inherited;
 
   mvFunc.HideMaster;
+
+end;
+
+procedure TfrmProdutos.btnEditarClick(Sender: TObject);
+begin
+  inherited;
+
+  editar;
 
 end;
 
@@ -211,6 +203,7 @@ begin
   inherited;
 
   tcFunc.ActiveTab := tabCad;
+
 end;
 
 procedure TfrmProdutos.btnVoltarClick(Sender: TObject);
@@ -222,13 +215,35 @@ begin
 
 end;
 
+procedure TfrmProdutos.cadastras;
+begin
+
+end;
+
+procedure TfrmProdutos.editar;
+begin
+
+  with dmProdutos.qryProd do
+  begin
+    edtNome.Text := FieldByName('Nome').AsString;
+    edtEAN.Text := FieldByName('EAN').AsString;
+    //edtObs.Text := FieldByName('Obs').AsString;
+
+  end;
+  tcFunc.ActiveTab := tabCad;
+  dmProdutos.qryProd.Edit;
+
+end;
+
 procedure TfrmProdutos.FormCreate(Sender: TObject);
 begin
   inherited;
 
+  tcFunc.ActiveTab := tabDetalhe;
+
   dmProdutos := TdmProdutos.Create(Self);
   dmProdutos.qryProd.Open();
-  dmProdutos.qryCat.Open();
+  // dmProdutos.qryCat.Open();
 
 end;
 
