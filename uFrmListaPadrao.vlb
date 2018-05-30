@@ -1,0 +1,12 @@
+﻿[lytBase]
+Coordinates=94,188,57,36
+Visible=False
+
+[lvLista]
+Coordinates=10,10,107,234
+Visible=True
+
+[]
+Coordinates=10,188,74,36
+Visible=False
+
